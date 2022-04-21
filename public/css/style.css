@@ -2,6 +2,14 @@
     estos NO se verá físicamente en la página de HTML, funcionan como custom propieties. Para este caso se 
     usa para almacenar colores
 */
+@font-face {
+    font-family: PartofMe;
+        src: url(fonts/KGPartofMe.ttf);
+    font-family: Mithella;
+        src: url(fonts/Mithella-Regular.otf);
+    font-family: MithellaBold;
+        src: url(fonts/Mithella-Bold.otf);
+}
 
 :root{
     --blanco: #ffffff; 
@@ -18,10 +26,13 @@ html {
 }
 
 body {
+    font-family:Mithella;
+    color: var(--blanco);
     font-size: 16px;
     background: linear-gradient(to right, #234a91, #912077);
 
 }
+
 
 .imagen{
     text-align: center;
