@@ -1,0 +1,27 @@
+/* Los roots son como cajitas en donde se pueden guardar variables que se han utilizado a lo largo del CSS
+    estos NO se verá físicamente en la página de HTML, funcionan como custom propieties. Para este caso se 
+    usa para almacenar colores
+*/
+
+:root{
+    --blanco: #ffffff; 
+    --oscuro: #21212121;
+    --primario: #FFC107;    
+    --secundario: #0097A7;
+    --gris: #757575;
+    --grisClaro: #DFE9F3;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    background: linear-gradient(to right, #234a91, #912077);
+}
+
+.imagen{
+    text-align: center;
+}
