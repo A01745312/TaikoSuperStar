@@ -18,6 +18,7 @@
     --secundario: #0097A7;
     --gris: #757575;
     --grisClaro: #DFE9F3;
+    --fondoShido: linear-gradient(to right, #234a91, #912077);
 }
 
 html {
@@ -29,7 +30,8 @@ body {
     font-family:Mithella;
     color: var(--blanco);
     font-size: 16px;
-    background: linear-gradient(to right, #234a91, #912077);
+    /*background: var(--fondoShido);*/
+    background-color: linear-gradient(to right, #234a91, #912077);
 
 }
 
