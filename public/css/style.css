@@ -31,7 +31,7 @@ body {
     font-size: 16px;    /* 1rem = 10px*/
     font-family: 'Krub', sans-serif;  /* Si se agrega el tipo de fuente en el body, significa que se aplicará a TODO el texto de la página WEB */
   /*background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100% );*/
-    background-color: linear-gradient(to right, var(--azulChiclamino) 0%, var(--rosaAvon) 100% );
+    background: linear-gradient(to right, var(--azulChiclamino) 0%, var(--rosaAvon) 100% );
 }
 
 .contenedor {
@@ -254,7 +254,7 @@ NOTA: Esta opción NO es recomendable
 /* Hero */
 
 .hero {
-    background-image: url(../img/hero.jpg); /* Esto es para buscar la imagen y colocarla */
+    background-image: url(/public/images/taiko_logo.png); /* Esto es para buscar la imagen y colocarla */
     background-repeat: no-repeat; /* Si se estira adapta en otros dispositivos, la imagen se duplicaría, con eso se soluciona ese error */
     background-size: cover; /* La colocas en el fondo*/
     height: 410px;  /* Estableces el tamaño del área*/
@@ -264,8 +264,8 @@ NOTA: Esta opción NO es recomendable
 
 .contenido-hero {
     position: absolute;
-    background-color: rgba(0, 0, 0,  .75); /** Esta forma ya es un poco vieja**/
-    background-color: rgb(0 0 0 / 70%);
+    /*background-color: rgba(0, 0, 0,  .75); /** Esta forma ya es un poco vieja**/
+    /*background-color: rgb(0 0 0 / 70%);*/
     width: 100%;
     height: 100%;
     
