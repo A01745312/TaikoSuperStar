@@ -30,7 +30,8 @@ html {
 body {
     font-size: 16px;    /* 1rem = 10px*/
     font-family: 'Krub', sans-serif;  /* Si se agrega el tipo de fuente en el body, significa que se aplicará a TODO el texto de la página WEB */
-    background-color: linear-gradient(to right, var(--azulChiclamino), var(--rosaAvon) 100% );
+  /*background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100% );*/
+    background-color: linear-gradient(to right, var(--azulChiclamino) 0%, var(--rosaAvon) 100% );
 }
 
 .contenedor {
