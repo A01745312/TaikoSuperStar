@@ -26,8 +26,6 @@ html {
 }
 
 body {
-    font-size: 16px;    /* 1rem = 10px*/
-    font-family: 'Krub', sans-serif;  /* Si se agrega el tipo de fuente en el body, significa que se aplicará a TODO el texto de la página WEB */
     background: radial-gradient(var(--rosaAvon) 0%, var(--naranjaPlus) 100% );
 }
 
