@@ -4,10 +4,175 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--<link href="C:\Users\Paula\Documents\Profesional\4to semestre\TaikoAvance\public\css\style.css" rel="stylesheet"> -->
-    <link href="/public/css/style.css">
+    <link href="public/css/style.css">
     <title>Taiko Super Star!</title>
 </head>
-<body>
-    <h1>Bienvenido</h1>
-</body>
+<!--El "<body> es para TODO el contenido de la página"-->
+    <body>
+        <header>    <!-- El header es la parte principal de todo el sitio WEB -->
+            <h1 class ="titulo"> Paula Santoyo <span> FreeGames </span> </h1>    <!-- El <span> permite separar algunas palabras, para 
+                                                                     darle algún tipo de edición extra, a una sola parte.-->
+        </header>
+    
+    
+        <!-- Esto indica que se hará un panel entero para crear links de navegación -->
+    
+    <div class="nav-bg">    <!--div de "division" -división . Sirve para crear secciones o agrupar contenidos.-->
+    
+        <nav class="navegacion-principal contenedor">  <!-- Puedes colocar mas de una clase con solo colocar un espacio, 
+                                                        OJO sólo se hace con las clases, NO aplica con ID --> 
+            <a href="#">Inicio</a>      <!-- Esto es para declarar un solo "link de navegación" -->
+            <a href="#">Sobre Mi</a>    <!-- <a href="#"> :: Esto es para darle el atributo de link -->
+            <a href="#">Clientes</a>    <!--<a href="#"> :: En el signo de "#", es donde debe de ir el link a donde redireccionará la página-->
+            <a href="#">Contacto</a>
+            <!--<a href="nosotros.html">Inicio </a> -->
+    
+    <!-- En el pasado, la sintaxis para crear links de navegación en HTML era:
+    
+        <ul>
+            <li> </li>
+        </ul>
+    
+        Esta sintaxis aún se utiliza espcialmente si el diseño del menú es de multiples niveles 
+    
+    -->
+    
+    
+    
+            <!--    <img src="hero.jpg">    // Sintaxis para colocar una imagen 
+            
+                OJO:
+                    Para colocar la imagen que desees, es necesario que esta esté en la misma carpeta de trabajo
+                    que en la que estan todos los HTML producidos
+    
+            -->
+        </nav>
+    </div>
+    
+    <!--    <img src="img\hero.jpg">     /*    FORMA DE COLOCAR UNA IMAGEN--> 
+    
+    
+        <section class="hero">   <!-- Los <section> son como un tipo de apartados, indican que es el contenido más importante del sitio WEB-->
+            <div class="contenido-hero">
+                        <h2 class="titulo"> Diseño y Desarrollo Web <span> TaikoStart </span></h2>
+                        
+                        <p>
+                            <!-- Esta parte del código es para colocar un ícono al sitio WEB -->
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-access-point" width="44" height="44"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <line x1="12" y1="12" x2="12" y2="12.01" />
+                                <path d="M14.828 9.172a4 4 0 0 1 0 5.656" />
+                                <path d="M17.657 6.343a8 8 0 0 1 0 11.314" />
+                                <path d="M9.168 14.828a4 4 0 0 1 0 -5.656" />
+                                <path d="M6.337 17.657a8 8 0 0 1 0 -11.314" />
+                            </svg>
+                            <!-- El ícono viene de una página públcia WEB, lo únicoq que se copia es el código 
+                                        
+                                        tablericons.com
+                        
+                                        -->
+                         Tlalnepantla de Baz, Estado de México </p>
+                        
+                        <!--NOTA:
+                                    Se usa <nav> cuando son bastantes links de navegación
+                                    
+                                    En caso de colocar un solo "link de navegación" basta con usar las etiquetas <a href="#"> texto </a>
+                                -->
+                        
+                        <a class="boton" href="#">Contactar</a>
+    
+            </div>  <!-- .contenido-hero -->
+    
+        </section> <!-- Aquí acaba una parte importante del ciclo
+            
+                Se pueden poner varias section
+            -->
+        
+        <main class="contenedor">      <!-- Las etiquetas "main" permiten acomodar la información ti casi siempre en el centro-->
+            <h2> Mis Servicios </h2>
+            <section>
+                <h3> Diseño Web </h3>
+                <!--Usar Lorem es muy común para rellenar y mostrar una fase de la página-->
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Vel nemo quam ducimus voluptatibus reprehenderit inventore! Non rerum voluptatem possimus omnis!
+                Ab architecto dolore, obcaecati sapiente molestiae numquam accusamus unde dolores.</p>
+            </section>
+            
+            <section>
+                <h3> Aplicaciones Web </h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Vel nemo quam ducimus voluptatibus reprehenderit inventore! Non rerum voluptatem possimus omnis!
+                    Ab architecto dolore, obcaecati sapiente molestiae numquam accusamus unde dolores.</p>
+            </section>
+            
+            <section>
+                <h3> E-commerer </h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Vel nemo quam ducimus voluptatibus reprehenderit inventore! Non rerum voluptatem possimus omnis!
+                    Ab architecto dolore, obcaecati sapiente molestiae numquam accusamus unde dolores.</p>
+            </section>
+            
+            
+        </main>
+        
+        <section>
+            <h2> Contacto </h2>
+    
+            <form>      <!-- Esto nos permite crear un formulario -->
+                <fieldset>  <!-- Permite organizar (en grupos de campos) los campos de un formulario -->
+                    <legend> Contáctanos llenando todos los campos. </legend>   <!-- Esto es un pequeño texto que aparecerá
+                                                                                     sobre el formulario -->
+                    
+                    <div>   <!-- Esto permite separar cada sección en ciertos intervalos -->
+                        <label>Nombre</label>   <!-- Esta es una sección del formulario donde se coloca cierta información -->
+                        <input type="text" placeholder="Tu nombre" />   <!-- En el "<input type="....." Se coloca el tipo 
+                                                                        de información que se almacenará
+                        Los tipos más comúnes son:
+    
+                            <input type="text" />  : Este permite colocar texto
+    
+                            <input type="checknox" />   : Este abre una serie de cajas, como tipo de selección múltiple
+                            
+                            <input type="radio" />  : Este es similar a "checkbox", pero solo permite UNA opción y son circulos
+    
+                            <input type="tel" />    : Este es similar al "text" y "number" pero es más enfocado a celulares
+    
+                            <input type="email" />  : Este es similar a "text", enfocado más a celulares con el teclado con @
+    
+                            <input type="number" /> : Este permite seleccionar un rango de opciones y/o números
+                                                                    -->
+                    </div>
+    
+                    <div>
+                        <label>Teléfono</label>
+                        <input type="tel" placeholder="Tu teléfono" />
+                    </div>
+    
+                    <div>
+                        <label> E-mail </label>
+                        <input type="email" placeholder="Tu e-mail" />
+                    </div>
+    
+                    <div>
+                        <label>Mensaje</label>
+                        <textarea></textarea>
+                    </div>
+    
+                    <div>
+                        <input type="submit" value="Enviar"/>  <!-- =   <button type="submit" value="Enviar">Enviar</button> -->
+                    </div>
+    
+                </fieldset>
+            </form>
+        </section>
+    
+        <footer>    <!-- Estas se colocan al final y por lo general tienen información de derechos de autor-->
+            <p> Todos los derechos reservados. Rey Condado Freelancer </p>
+        </footer>
+        
+    </body>     <!-- Con esto se cierra el contenido de la página-->
+    </html>     <!-- Con esto se concluye el desarrollo de creación de la página-->
 </html>
