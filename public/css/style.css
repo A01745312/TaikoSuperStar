@@ -143,7 +143,7 @@ h1,h2,h3 {
 
 
 .hero {
-    background-image: url(/public/images/taiko_logo.png); /* Esto es para buscar la imagen y colocarla */
+    background-image: url(/public/images/); /* Esto es para buscar la imagen y colocarla */
     background-repeat: no-repeat; /* Si se estira adapta en otros dispositivos, la imagen se duplicaría, con eso se soluciona ese error */
     background-size: cover; /* La colocas en el fondo*/
     height: 410px;  /* Estableces el tamaño del área*/
