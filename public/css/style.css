@@ -1,7 +1,3 @@
-/* Los roots son como cajitas en donde se pueden guardar variables que se han utilizado a lo largo del CSS
-    estos NO se verá físicamente en la página de HTML, funcionan como custom propieties. Para este caso se 
-    usa para almacenar colores
-*/
 :root{
     --blanco: #ffffff;  /* Los colores se colocan en hexadecimal junto con el símbolo de # */
     --oscuro: #21212121;
@@ -32,7 +28,6 @@ html {
 body {
     font-size: 16px;    /* 1rem = 10px*/
     font-family: 'Krub', sans-serif;  /* Si se agrega el tipo de fuente en el body, significa que se aplicará a TODO el texto de la página WEB */
-  /*background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100% );*/
     background: radial-gradient(var(--rosaAvon) 0%, var(--naranjaPlus) 100% );
 }
 
@@ -46,12 +41,6 @@ body {
     margin-right: auto;
     margin-bottom: 0px;
     margin-left: auto;
-
-    /* Si queremos centrar, se debe de acomodar de esa forma
-    sin embargo para ahorrarse todo ese código se puede 
-    usar sólamente "margin:" como se muestra abajo */
-    
-/*    margin: 0 auto 0 auto; /*= margin: 0 auto; */
 
 }
 
@@ -76,25 +65,8 @@ body {
 
 .titulo, .subtitulo {
     text-align: center; /* Centrar el texto */
-                        /*  color: red; */       /* Dar color a  algo*/    
-    /*font-size: 3.8rem;*/
     font-size: var(--fuentePrincipal);    /* =   font-size: 2rem;*/
-    /* width: 20rem; */ /* 1rem = 10px */
-    /* color: var(--primario); */   /* ------------>  color: yellow;*/
-    /*font-family: Verdana, Geneva, Tahoma, sans-serif;      /* Si no encuentras una fuente de tu agrado, buscar en Google Fonts */
-    /*font-family: 'Krub', sans-serif;*/
-    
 }
-
-/* Como notarás, este es el mismo código, por lo que se juntarán, eso se hace a partir de usar una (,) y
-    colocar el nombre de la variable en que se usará */
-
-/*    
-.subtitulo {
-    text-align: center;
-    font-size: 3.8rem;
-}
-*/
 
 
 /* Tipografía */
@@ -116,82 +88,21 @@ h1,h2,h3 {
 
 .titulo span {
     font-size: 20px;    /* Cambiar el tamaño de la fuente */
-    /*
-        Medidas:
-            El tamaño de las fuentes en páginas web son de varios tipos, los más comunes son:
-                - 20 px (pixeles)  
-                - 20 rem  <------- Son los más recomendados, ya que es relativo al documento
-                - 20 em    <----- NOTA: Su escala no es igual que en todos los espacios, el padre (el primer texto escrito en em)
-                                        es el que define como actuará en el futuro.
-        
-        Esto de cambiar las meddidas a cada instante se vuelve un poco tedioso, por lo que para evitar esta situación, se
-        recomienda reiniciar las fuentes de los  
 
-    */
 }
 
-/* TODOS los siguientes códigos, son SELECTS de clase, sin embargo unos son más específicos que otros*/
-
-                                                                                                    /*
-
-h1.titulo span{ /* Este SELECT especifica excatamente donde quiere esta modificación *//*
-    font-size: 2rem;
-    color: blue;
-}                                                                                                    */
-
-                                                                                                /*
-
-.titulo span {  /* Este SÓLO establece que en cualquier texto que sea de class= "title" AND que tenga un "span" realiza esas instrucciones */ /*
-    font-size: 2rem;
-    color:red;
-}                                                                                                   */
-
-                                                                                                                        /*
-span {      /* Este sólo establece que en cualqyuer texto que tenga span realice esta instrucción */ /*
-    color: green;
-}                                                                                                                       */
-
-
-/*
-
-span {      /* Este sólo establece que en cualqyuer texto que tenga span realice esta instrucción *//*
-    color: green!important;     Esto establece que SÓLO esta instrucción es muy importante, por lo que no importa la condición, lo hará en 
-                                cualquier span
-}
-
-NOTA: Esta opción NO es recomendable
-
-*/
-
-/* Navegación principal*/
 
 .nav-bg {   /* .nav-bg corrigió el problema de repartición de pixeles junto al <div>*/
     background-color: orangered;    
 }
 
 .navegacion-principal {
-/*    background-color: var(--secundario); /* Esto te permite colocar un fondo del color que se seleccionó
-                                            esto le permite dar más estilo estético */
-/*    padding: 1rem;    */
+    
     display: flex;       /* Aún no lo comprendo , sólo sé que activa los comandos flex */
     
-
     flex-direction: column;
 
-    /*flex-direction: column;       Esto hará que se acomode de forma horizontal, como una lista (de arriba hacia abajo)
-      align-items: center;  align-items: flex-start;        Estos los acomodarán de arriba hacia abajo, en diferentes posiciones */
-
-/*    justify-content: space-between; /* Me permite mover el contenido horizontalmente */
-    /*También se puede usar como colocadores:        justificy-content: center;   justify-content: flex-start; */
-
-    /* Para distribuir el contenido:         justify-content: space-around;     justify-content:space-evely     justify-content: space-between */
-
-    /* padding-top: 1 rem; /* = padding: 1rem 1rem 1rem 1rem */
-
 }
-
-/* Recuerda que esta área es para que en dispositivos dde difernetes gamas se adapte la página WEB */
-/* En general son los condicionales de CSS, para este código sólo se basa en la gama del dispositivo */
 
 @media (min-width: 768px) {
     .navegacion-principal {
@@ -233,28 +144,6 @@ NOTA: Esta opción NO es recomendable
 }
 
 
-/*p {
-    /*background-color: var(--primario);
-    display: inline;
-    display: block;
-
-    
-}*/
-
-
-/*
-@media (min-width: 480px) { /* Esto es la forma en que se declara, y también establce un condicional */
-                            /* en donde establece que si la pantalla llega a 480 px, hará lo que dice el código */   
-/*    body {
-        background-color: blue;
-    }
-}
-*/
-
-/* Con control + shift + p , busca "User Snippets" y después  CSS.json*/
-
-/* Hero */
-
 .hero {
     background-image: url(/public/images/taiko_logo.png); /* Esto es para buscar la imagen y colocarla */
     background-repeat: no-repeat; /* Si se estira adapta en otros dispositivos, la imagen se duplicaría, con eso se soluciona ese error */
@@ -275,35 +164,6 @@ NOTA: Esta opción NO es recomendable
     flex-direction: column; /* Alinear el texto en forma de columna*/
     align-items: center;    /* Alinear el texto  hacia el centro de forma horizontal */
     justify-content: center;    /* Alinear el texto  hacia el centro de forma vertical */
-
-
-    /*top: 0;
-    right: 0;
-    */
-
-    /* Formas para que la imagen abarque TODO el fondo: 
-    
-    1) Eliminar el width y height y añadir: 
-    .contenido-hero {
-        position: absolute;
-        background-color: red;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;       
-    }
-
-    2) Poner width y height en 100% 
-    .contenido-hero {
-        position: absolute;
-        background-color: red;
-        width: 100%
-        height: 100%       
-    }
-
-OJO: Esta toma las medidas que se declararon en el padre (hero).
-    
-    */
 }
 
 .contenido-hero h2,
