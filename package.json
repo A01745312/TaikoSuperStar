@@ -1,0 +1,27 @@
+{
+  "name": "taikoavance",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/A01745312/TaikoSuperStar.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/A01745312/TaikoSuperStar/issues"
+  },
+  "homepage": "https://github.com/A01745312/TaikoSuperStar#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "express": "^4.17.3",
+    "fund": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
