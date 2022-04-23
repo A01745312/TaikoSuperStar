@@ -4,13 +4,14 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 
+// Crear servidor
+const app = express();
+
 // Middleware
 app.use(express.static(path.join(__dirname,'public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
-// Crear servidor
-const app = express();
 
 
 app.engine('html',require('ejs').renderFile);
