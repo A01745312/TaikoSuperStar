@@ -3,10 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css\style.css" rel="stylesheet">
+    <!--<link href="C:\Users\Paula\Documents\Profesional\4to semestre\TaikoAvance\public\css\style.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <title>Taiko Super Star!</title>
 </head>
-<body>
-    <h1>Bienvenido</h1>
-</body>
+    <body>
+        <header>    <!-- El header es la parte principal de todo el sitio WEB -->
+            <h1 class ="titulo"> Paula Santoyo <span> FreeGames </span> </h1>    <!-- El <span> permite separar algunas palabras, para 
+                                                                     darle algún tipo de edición extra, a una sola parte.-->
+        </header>
+
+        <section class="hero">   <!-- Los <section> son como un tipo de apartados, indican que es el contenido más importante del sitio WEB-->
+            <div class="contenido-hero">
+                        <h2 class="titulo"> Diseño y Desarrollo Web <span> TaikoStart </span></h2>
+            </div>  <!-- .contenido-hero -->
+
+    
+        </section> <!-- Aquí acaba una parte importante del ciclo Se pueden poner varias section -->
+        
+        <main class="contenedor">      <!-- Las etiquetas "main" permiten acomodar la información ti casi siempre en el centro-->
+            <h2> Mis Servicios </h2>
+            <section>
+                <h3> Diseño Web </h3>
+                <!--Usar Lorem es muy común para rellenar y mostrar una fase de la página-->
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Vel nemo quam ducimus voluptatibus reprehenderit inventore! Non rerum voluptatem possimus omnis!
+                Ab architecto dolore, obcaecati sapiente molestiae numquam accusamus unde dolores.</p>
+            </section>
+
+            <section>
+                <h3> Aplicaciones Web </h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Vel nemo quam ducimus voluptatibus reprehenderit inventore! Non rerum voluptatem possimus omnis!
+                    Ab architecto dolore, obcaecati sapiente molestiae numquam accusamus unde dolores.</p>
+            </section>
+            
+            <section>
+                <h3> E-commerer </h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Vel nemo quam ducimus voluptatibus reprehenderit inventore! Non rerum voluptatem possimus omnis!
+                    Ab architecto dolore, obcaecati sapiente molestiae numquam accusamus unde dolores.</p>
+            </section>
+            
+            
+        </main>
+        
+        <section>
+            <h2> Contacto </h2>
+    
+            <form>      <!-- Esto nos permite crear un formulario -->
+                <fieldset>  <!-- Permite organizar (en grupos de campos) los campos de un formulario -->
+                    <legend> Contáctanos llenando todos los campos. </legend>   <!-- Esto es un pequeño texto que aparecerá
+                                                                                     sobre el formulario -->
+                    
+                    <div>   <!-- Esto permite separar cada sección en ciertos intervalos -->
+                        <label>Nombre</label>   <!-- Esta es una sección del formulario donde se coloca cierta información -->
+                        <input type="text" placeholder="Tu nombre" />   <!-- En el "<input type="....." Se coloca el tipo  -->
+                    </div>
+    
+                    <div>
+                        <label>Teléfono</label>
+                        <input type="tel" placeholder="Tu teléfono" />
+                    </div>
+    
+                    <div>
+                        <label> E-mail </label>
+                        <input type="email" placeholder="Tu e-mail" />
+                    </div>
+    
+                    <div>
+                        <label>Mensaje</label>
+                        <textarea></textarea>
+                    </div>
+    
+                    <div>
+                        <input type="submit" value="Enviar"/>  <!-- =   <button type="submit" value="Enviar">Enviar</button> -->
+                    </div>
+    
+                </fieldset>
+            </form>
+        </section>
+    
+        <footer>    <!-- Estas se colocan al final y por lo general tienen información de derechos de autor-->
+            <p> Todos los derechos reservados. Paula Santoyo FreeGames </p>
+        </footer>
+        
+    </body>     <!-- Con esto se cierra el contenido de la página-->
+    </html>     <!-- Con esto se concluye el desarrollo de creación de la página-->
 </html>

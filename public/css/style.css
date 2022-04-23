@@ -1,35 +1,71 @@
-/* Los roots son como cajitas en donde se pueden guardar variables que se han utilizado a lo largo del CSS
-    estos NO se verá físicamente en la página de HTML, funcionan como custom propieties. Para este caso se 
-    usa para almacenar colores
-*/
-@font-face {
-    font-family: PartofMe;
-        src: url(fonts/KGPartofMe.ttf);
-    font-family: Mithella;
-        src: url(fonts/Mithella-Regular.otf);
-    font-family: MithellaBold;
-        src: url(fonts/Mithella-Bold.otf);
-}
-
 :root{
-    --blanco: #ffffff; 
+    --blanco: #ffffff;  /* Los colores se colocan en hexadecimal junto con el símbolo de # */
     --oscuro: #21212121;
-    --primario: #FFC107;    
+    --primario: #FFC107;     /*= --primario: rgba(255, 193, 7, 1); */
     --secundario: #0097A7;
     --gris: #757575;
     --grisClaro: #DFE9F3;
+    --azulChiclamino: #234a91;
+    --rosaAvon: #912077;
+    --naranjaPlus: rgba(250, 71, 6, 0.808);
+    --rosaTenue: rgba(255, 127, 234, 0.895);
+
+    
+    --fuentePrincipal: 2.8rem;  /* Tamaño de la fuente*/
 }
+
+/* Globales */
 
 html {
     font-size: 62.5%;
-    box-sizing: border-box;
+    box-sizing: border-box;     /* Se resuelve el problema del padding*/    /* Hack para Box Model*/
+}
+
+*, *:before, *:after {  /* Significa que lo aplicará a toda la página, a todas las propiedades requeridas */
+    box-sizing: inherit;
 }
 
 body {
-    font-family:PartofMe;
+    font-size: 16px;    /* 1rem = 10px*/
+    font-family: 'Krub', sans-serif;  /* Si se agrega el tipo de fuente en el body, significa que se aplicará a TODO el texto de la página WEB */
+    background: radial-gradient(var(--rosaAvon) 0%, var(--naranjaPlus) 100% );
+}
+
+.contenedor {
+    /*width: 120rem;  /* 1200 pixeles */
+    max-width: 120rem;
+
+/* Esta sección es para acomodar */
+
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+
+}
+
+.boton {
+    background-color: var(--secundario);
     color: var(--blanco);
-    font-size: 16px;
-    background: linear-gradient(to right, #234a91, #912077);
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .boton {
+        width: auto;
+    }
+}
+
+.titulo, .subtitulo {
+    text-align: center; /* Centrar el texto */
+    font-size: var(--fuentePrincipal);    /* =   font-size: 2rem;*/
 }
 
 h1{
@@ -39,6 +75,108 @@ h1{
     text-align: center; 
 }
 
-.imagen{
+/* Tipografía */
+h1 {
+    font-size: 3.8rem;
+}
+h2 {
+    font-size: 2.8rem;
+}
+h3 {
+    font-size: 1.8rem;
+}
+h1,h2,h3 {
     text-align: center;
+}
+
+
+/* Títulos */
+
+.titulo span {
+    font-size: 20px;    /* Cambiar el tamaño de la fuente */
+
+}
+
+
+.nav-bg {   /* .nav-bg corrigió el problema de repartición de pixeles junto al <div>*/
+    background-color: orangered;    
+}
+
+.navegacion-principal {
+    
+    display: flex;       /* Aún no lo comprendo , sólo sé que activa los comandos flex */
+    
+    flex-direction: column;
+
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 480px) {
+    
+}
+
+
+@media (min-width: 1140px) {
+    
+}
+
+
+@media (min-width: 1440px) {
+    
+}
+
+.navegacion-principal a {   /* Esta clase está enfocada más en los navegadores (<a>) */
+/*    background-color: var(--primario); */
+    display: block;
+    text-align: center;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;   /* Esta medida se estableció al momento de importar la fuente, por lo que lo que se hace es establecerla en la página */
+    padding: 1rem;  /* La medida recomendada para los íconos de navegación, son en su mayoría de 1rem */
+    
+}
+
+.navegacion-principal a:hover {     /* Esta sección es la encargada de ponerle color a las pestañas de navegación */
+    background-color: var(--primario);  /* Establecemos el color de fondo al momento de seleccionarlo, el cual será amarillo */
+    color: var(--oscuro);   /* Se coloca el color de la fuente al momento de seleccionarlo */
+    
+}
+
+
+.hero {
+    background-image: url(/public/images/taiko_logo.png); /* Esto es para buscar la imagen y colocarla */
+    background-repeat: no-repeat; /* Si se estira adapta en otros dispositivos, la imagen se duplicaría, con eso se soluciona ese error */
+    background-size: cover; /* La colocas en el fondo*/
+    height: 410px;  /* Estableces el tamaño del área*/
+    /*padding: 20px;*/
+    position: relative;
+}
+
+.contenido-hero {
+    position: absolute;
+    /*background-color: rgba(0, 0, 0,  .75); /** Esta forma ya es un poco vieja**/
+    /*background-color: rgb(0 0 0 / 70%);*/
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column; /* Alinear el texto en forma de columna*/
+    align-items: center;    /* Alinear el texto  hacia el centro de forma horizontal */
+    justify-content: center;    /* Alinear el texto  hacia el centro de forma vertical */
+}
+
+.contenido-hero h2,
+.contenido-hero p {
+    color: var(--blanco);
+}
+.contenedor-hero .ubicacion {
+    display: flex;
+    align-items: flex-end;
 }
