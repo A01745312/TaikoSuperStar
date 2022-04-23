@@ -2,40 +2,312 @@
     estos NO se verá físicamente en la página de HTML, funcionan como custom propieties. Para este caso se 
     usa para almacenar colores
 */
-@font-face {
-    font-family: PartofMe;
-        src: url(fonts/KGPartofMe.ttf);
-    font-family: Mithella;
-        src: url(fonts/Mithella-Regular.otf);
-    font-family: MithellaBold;
-        src: url(fonts/Mithella-Bold.otf);
-}
-
 :root{
-    --blanco: #ffffff; 
+    --blanco: #ffffff;  /* Los colores se colocan en hexadecimal junto con el símbolo de # */
     --oscuro: #21212121;
-    --primario: #FFC107;    
+    --primario: #FFC107;     /*= --primario: rgba(255, 193, 7, 1); */
     --secundario: #0097A7;
     --gris: #757575;
     --grisClaro: #DFE9F3;
-    --fondoShido: linear-gradient(to right, #234a91, #912077);
+    --azulChiclamino: #234a91;
+    --rosaAvon: #912077;
+
+    
+    --fuentePrincipal: 2.8rem;  /* Tamaño de la fuente*/
 }
+
+/* Globales */
 
 html {
     font-size: 62.5%;
-    box-sizing: border-box;
+    box-sizing: border-box;     /* Se resuelve el problema del padding*/    /* Hack para Box Model*/
+}
+
+*, *:before, *:after {  /* Significa que lo aplicará a toda la página, a todas las propiedades requeridas */
+    box-sizing: inherit;
 }
 
 body {
-    font-family:Mithella;
-    color: var(--blanco);
-    font-size: 16px;
-    /*background: var(--fondoShido);*/
-    background-color: linear-gradient(to right, #234a91, #912077);
+    font-size: 16px;    /* 1rem = 10px*/
+    font-family: 'Krub', sans-serif;  /* Si se agrega el tipo de fuente en el body, significa que se aplicará a TODO el texto de la página WEB */
+    background-color: linear-gradient(to right, var(--azulChiclamino), var(--rosaAvon) 100% );
+}
+
+.contenedor {
+    /*width: 120rem;  /* 1200 pixeles */
+    max-width: 120rem;
+
+/* Esta sección es para acomodar */
+
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+
+    /* Si queremos centrar, se debe de acomodar de esa forma
+    sin embargo para ahorrarse todo ese código se puede 
+    usar sólamente "margin:" como se muestra abajo */
+    
+/*    margin: 0 auto 0 auto; /*= margin: 0 auto; */
 
 }
 
-
-.imagen{
+.boton {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
     text-align: center;
+}
+@media (min-width: 768px) {
+    .boton {
+        width: auto;
+    }
+}
+
+.titulo, .subtitulo {
+    text-align: center; /* Centrar el texto */
+                        /*  color: red; */       /* Dar color a  algo*/    
+    /*font-size: 3.8rem;*/
+    font-size: var(--fuentePrincipal);    /* =   font-size: 2rem;*/
+    /* width: 20rem; */ /* 1rem = 10px */
+    /* color: var(--primario); */   /* ------------>  color: yellow;*/
+    /*font-family: Verdana, Geneva, Tahoma, sans-serif;      /* Si no encuentras una fuente de tu agrado, buscar en Google Fonts */
+    /*font-family: 'Krub', sans-serif;*/
+    
+}
+
+/* Como notarás, este es el mismo código, por lo que se juntarán, eso se hace a partir de usar una (,) y
+    colocar el nombre de la variable en que se usará */
+
+/*    
+.subtitulo {
+    text-align: center;
+    font-size: 3.8rem;
+}
+*/
+
+
+/* Tipografía */
+h1 {
+    font-size: 3.8rem;
+}
+h2 {
+    font-size: 2.8rem;
+}
+h3 {
+    font-size: 1.8rem;
+}
+h1,h2,h3 {
+    text-align: center;
+}
+
+
+/* Títulos */
+
+.titulo span {
+    font-size: 20px;    /* Cambiar el tamaño de la fuente */
+    /*
+        Medidas:
+            El tamaño de las fuentes en páginas web son de varios tipos, los más comunes son:
+                - 20 px (pixeles)  
+                - 20 rem  <------- Son los más recomendados, ya que es relativo al documento
+                - 20 em    <----- NOTA: Su escala no es igual que en todos los espacios, el padre (el primer texto escrito en em)
+                                        es el que define como actuará en el futuro.
+        
+        Esto de cambiar las meddidas a cada instante se vuelve un poco tedioso, por lo que para evitar esta situación, se
+        recomienda reiniciar las fuentes de los  
+
+    */
+}
+
+/* TODOS los siguientes códigos, son SELECTS de clase, sin embargo unos son más específicos que otros*/
+
+                                                                                                    /*
+
+h1.titulo span{ /* Este SELECT especifica excatamente donde quiere esta modificación *//*
+    font-size: 2rem;
+    color: blue;
+}                                                                                                    */
+
+                                                                                                /*
+
+.titulo span {  /* Este SÓLO establece que en cualquier texto que sea de class= "title" AND que tenga un "span" realiza esas instrucciones */ /*
+    font-size: 2rem;
+    color:red;
+}                                                                                                   */
+
+                                                                                                                        /*
+span {      /* Este sólo establece que en cualqyuer texto que tenga span realice esta instrucción */ /*
+    color: green;
+}                                                                                                                       */
+
+
+/*
+
+span {      /* Este sólo establece que en cualqyuer texto que tenga span realice esta instrucción *//*
+    color: green!important;     Esto establece que SÓLO esta instrucción es muy importante, por lo que no importa la condición, lo hará en 
+                                cualquier span
+}
+
+NOTA: Esta opción NO es recomendable
+
+*/
+
+/* Navegación principal*/
+
+.nav-bg {   /* .nav-bg corrigió el problema de repartición de pixeles junto al <div>*/
+    background-color: var(--secundario);    
+}
+
+.navegacion-principal {
+/*    background-color: var(--secundario); /* Esto te permite colocar un fondo del color que se seleccionó
+                                            esto le permite dar más estilo estético */
+/*    padding: 1rem;    */
+    display: flex;       /* Aún no lo comprendo , sólo sé que activa los comandos flex */
+    
+
+    flex-direction: column;
+
+    /*flex-direction: column;       Esto hará que se acomode de forma horizontal, como una lista (de arriba hacia abajo)
+      align-items: center;  align-items: flex-start;        Estos los acomodarán de arriba hacia abajo, en diferentes posiciones */
+
+/*    justify-content: space-between; /* Me permite mover el contenido horizontalmente */
+    /*También se puede usar como colocadores:        justificy-content: center;   justify-content: flex-start; */
+
+    /* Para distribuir el contenido:         justify-content: space-around;     justify-content:space-evely     justify-content: space-between */
+
+    /* padding-top: 1 rem; /* = padding: 1rem 1rem 1rem 1rem */
+
+}
+
+/* Recuerda que esta área es para que en dispositivos dde difernetes gamas se adapte la página WEB */
+/* En general son los condicionales de CSS, para este código sólo se basa en la gama del dispositivo */
+
+@media (min-width: 768px) {
+    .navegacion-principal {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 480px) {
+    
+}
+
+
+@media (min-width: 1140px) {
+    
+}
+
+
+@media (min-width: 1440px) {
+    
+}
+
+.navegacion-principal a {   /* Esta clase está enfocada más en los navegadores (<a>) */
+/*    background-color: var(--primario); */
+    display: block;
+    text-align: center;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;   /* Esta medida se estableció al momento de importar la fuente, por lo que lo que se hace es establecerla en la página */
+    padding: 1rem;  /* La medida recomendada para los íconos de navegación, son en su mayoría de 1rem */
+    
+}
+
+.navegacion-principal a:hover {     /* Esta sección es la encargada de ponerle color a las pestañas de navegación */
+    background-color: var(--primario);  /* Establecemos el color de fondo al momento de seleccionarlo, el cual será amarillo */
+    color: var(--oscuro);   /* Se coloca el color de la fuente al momento de seleccionarlo */
+    
+}
+
+
+/*p {
+    /*background-color: var(--primario);
+    display: inline;
+    display: block;
+
+    
+}*/
+
+
+/*
+@media (min-width: 480px) { /* Esto es la forma en que se declara, y también establce un condicional */
+                            /* en donde establece que si la pantalla llega a 480 px, hará lo que dice el código */   
+/*    body {
+        background-color: blue;
+    }
+}
+*/
+
+/* Con control + shift + p , busca "User Snippets" y después  CSS.json*/
+
+/* Hero */
+
+.hero {
+    background-image: url(../img/hero.jpg); /* Esto es para buscar la imagen y colocarla */
+    background-repeat: no-repeat; /* Si se estira adapta en otros dispositivos, la imagen se duplicaría, con eso se soluciona ese error */
+    background-size: cover; /* La colocas en el fondo*/
+    height: 410px;  /* Estableces el tamaño del área*/
+    /*padding: 20px;*/
+    position: relative;
+}
+
+.contenido-hero {
+    position: absolute;
+    background-color: rgba(0, 0, 0,  .75); /** Esta forma ya es un poco vieja**/
+    background-color: rgb(0 0 0 / 70%);
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column; /* Alinear el texto en forma de columna*/
+    align-items: center;    /* Alinear el texto  hacia el centro de forma horizontal */
+    justify-content: center;    /* Alinear el texto  hacia el centro de forma vertical */
+
+
+    /*top: 0;
+    right: 0;
+    */
+
+    /* Formas para que la imagen abarque TODO el fondo: 
+    
+    1) Eliminar el width y height y añadir: 
+    .contenido-hero {
+        position: absolute;
+        background-color: red;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;       
+    }
+
+    2) Poner width y height en 100% 
+    .contenido-hero {
+        position: absolute;
+        background-color: red;
+        width: 100%
+        height: 100%       
+    }
+
+OJO: Esta toma las medidas que se declararon en el padre (hero).
+    
+    */
+}
+
+.contenido-hero h2,
+.contenido-hero p {
+    color: var(--blanco);
+}
+.contenedor-hero .ubicacion {
+    display: flex;
+    align-items: flex-end;
 }
