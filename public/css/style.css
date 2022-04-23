@@ -11,6 +11,8 @@
     --grisClaro: #DFE9F3;
     --azulChiclamino: #234a91;
     --rosaAvon: #912077;
+    --naranjaPlus: rgba(250, 71, 6, 0.808);
+    --rosaTenue: rgba(255, 127, 234, 0.895);
 
     
     --fuentePrincipal: 2.8rem;  /* Tamaño de la fuente*/
@@ -31,7 +33,7 @@ body {
     font-size: 16px;    /* 1rem = 10px*/
     font-family: 'Krub', sans-serif;  /* Si se agrega el tipo de fuente en el body, significa que se aplicará a TODO el texto de la página WEB */
   /*background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100% );*/
-    background: linear-gradient(to right, var(--azulChiclamino) 0%, var(--rosaAvon) 100% );
+    background: radial-gradient(var(--rosaAvon) 0%, var(--naranjaPlus) 100% );
 }
 
 .contenedor {
@@ -164,7 +166,7 @@ NOTA: Esta opción NO es recomendable
 /* Navegación principal*/
 
 .nav-bg {   /* .nav-bg corrigió el problema de repartición de pixeles junto al <div>*/
-    background-color: var(--secundario);    
+    background-color: orangered;    
 }
 
 .navegacion-principal {
