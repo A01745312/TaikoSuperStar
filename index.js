@@ -3,6 +3,7 @@ const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
+const bcryptjs = require('bcryptjs');
 
 
 // Crear servidor
@@ -46,6 +47,22 @@ app.post('/pruebaDatos',(req,res)=>{
     console.log('Pase por prueba datos');
     console.log(req.body);
     res.redirect('/main');
+});
+
+// Para subir datos a la BD
+app.post("/login", async(req,res) => {
+    const email = req.body.emailUsuario;
+    const password = req.body.passwordUsuario;
+    const confirmPass = req.body.passwordConfirmarUsuario;
+  
+    let passwordHaash = await bcryptjs.hash(password,8);
+    connection.query('INSERT INTO login SET ?', {email:email, password:passwordHaash, 'confirm password':passwordHaash }, async(error,results) => {
+      if(error){
+          console.log(error);
+      }else{
+          res.send("Alta exitosa");
+      }
+    });
 });
 
 app.listen(8081,()=> console.log("Servidor en línea en el puerto 8081"));
