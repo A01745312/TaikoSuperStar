@@ -39,15 +39,7 @@ app.get('/main', (req,res) => {
 
 
 app.get('/login',(req,res)=>{
-    const consulta = 'SELECT * FROM login';
-    connection.query(consulta,(error,results) => {
-      if (error) throw error;
-      if (results.length > 0){
-        res.sendFile(path.join(__dirname,'views','login.html'));
-      }else{
-          res.send('No hay resultados');
-      }
-    });
+    res.sendFile(path.join(__dirname,'views','login.html'));
 });
 
 app.post('/pruebaDatos',(req,res)=>{
