@@ -9,8 +9,6 @@
     --rosaAvon: #912077;
     --naranjaPlus: rgba(250, 71, 6, 0.808);
     --rosaTenue: rgba(255, 127, 234, 0.895);
-
-    
     --fuentePrincipal: 2.8rem;  /* Tamaño de la fuente*/
 }
 
@@ -26,7 +24,7 @@ html {
 }
 
 body {
-    background: radial-gradient(var(--rosaAvon) 0%, var(--naranjaPlus) 100% );
+    background: radial-gradient(var(--blanco) 0%, var(--naranjaPlus) 100% );
 }
 
 .contenedor {
@@ -143,9 +141,9 @@ h1,h2,h3 {
 
 
 .hero {
-    background-image: url(/public/images/); /* Esto es para buscar la imagen y colocarla */
-    background-repeat: no-repeat; /* Si se estira adapta en otros dispositivos, la imagen se duplicaría, con eso se soluciona ese error */
-    background-size: cover; /* La colocas en el fondo*/
+    /*background-image: url(images/main.png);*/ /* Esto es para buscar la imagen y colocarla */
+    /*background-repeat: no-repeat;*/ /* Si se estira adapta en otros dispositivos, la imagen se duplicaría, con eso se soluciona ese error */
+    /*background-size: cover;*/ /* La colocas en el fondo*/
     height: 410px;  /* Estableces el tamaño del área*/
     /*padding: 20px;*/
     position: relative;
@@ -164,10 +162,10 @@ h1,h2,h3 {
     justify-content: center;    /* Alinear el texto  hacia el centro de forma vertical */
 }
 
-.contenido-hero h2,
-.contenido-hero p {
-    color: var(--blanco);
+.contenido-hero h2, .contenido-hero p {
+    color: var(--oscuro);
 }
+
 .contenedor-hero .ubicacion {
     display: flex;
     align-items: flex-end;

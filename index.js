@@ -11,7 +11,7 @@ const app = express();
 
 // Conectar BD
 
-const connection = mysql.createConnection({
+/* const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
@@ -21,7 +21,7 @@ const connection = mysql.createConnection({
 connection.connect((err) => {
   if (err) throw err;
   console.log("Connected to database");
-});
+}); */
 
 // Middleware
 app.use(express.static(path.join(__dirname,'public')));
