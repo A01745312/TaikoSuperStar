@@ -24,6 +24,7 @@ connection.connect((err) => {
   console.log("Connected to database");
 });
 
+
 // Middleware
 app.use(express.static(path.join(__dirname,'public')));
 app.use(bodyParser.json());
@@ -54,15 +55,24 @@ app.post("/login", async(req,res) => {
     const email = req.body.emailUsuario;
     const password = req.body.passwordUsuario;
     const confirmPass = req.body.passwordConfirmarUsuario;
+    if (password == confirmPass){
   
-    let passwordHaash = await bcryptjs.hash(password,8);
-    connection.query('INSERT INTO login SET ?', {email:email, password:passwordHaash, 'confirm password':passwordHaash }, async(error,results) => {
-      if(error){
-          console.log(error);
-      }else{
-          res.send("Alta exitosa");
-      }
-    });
+        let passwordHaash = await bcryptjs.hash(password,8);
+        connection.query('INSERT INTO login SET ?', {
+            email:email, 
+            password:passwordHaash, 
+            'confirm password':passwordHaash 
+        }, async(error,results) => {
+        if(error){
+            console.log(error);
+        }else{
+            res.send("Alta exitosa");
+        }
+        });
+    }else{
+        console.log("Las contraseñas no coinciden");
+        res.status(404).send('La contraseña no coincide');
+    }
 });
 
 app.listen(8081,()=> console.log("Servidor en línea en el puerto 8081"));
@@ -71,25 +81,6 @@ app.listen(8081,()=> console.log("Servidor en línea en el puerto 8081"));
 // ----------------------------------------------------------------------
 
     //   ******** PLANTILLAS PARA CONEXIÓN BD ***********
-
-
-/* app.get('/plantillaEJS', (req,res)=> {
-    // Simular una consulta a la BS
-    const consulta = [
-        {usuarioUsuario: 'Maria', password: "efewf", edad:18},
-        {usuarioUsuario: 'Juan', password: "jsked", edad:18},
-        {usuarioUsuario: 'Maria', password: "efewf", edad:18},
-        {usuarioUsuario: 'Juan', password: "jsked", edad:18},
-        {usuarioUsuario: 'Maria', password: "efewf", edad:18},
-        {usuarioUsuario: 'Juan', password: "jsked", edad:18}
-
-    ];
-    res.render('ejemploEJS.html',{
-        personas: consulta,
-        sesion: "Autorizada",
-        fecha: 2021
-    });
-}); */
 
 
 // Consulta a BD MySQL
