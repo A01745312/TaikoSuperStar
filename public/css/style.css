@@ -121,6 +121,21 @@ h1,h2,h3 {
     
 }
 
+@font-face {
+    font-family: Mithella;
+    src: url(fonts/Mithella-Regular.otf);
+}
+
+@font-face {
+    font-family: Partofme;
+    src: url(fonts/KGPartofMe.ttf);
+}
+
+@font-face {
+    font-family: Papernotes;
+    src: url(fonts/Papernotes.ttf);
+}
+
 .navegacion-principal a {   /* Esta clase está enfocada más en los navegadores (<a>) */
 /*    background-color: var(--primario); */
     display: block;
@@ -170,3 +185,69 @@ h1,h2,h3 {
     display: flex;
     align-items: flex-end;
 }
+
+.login-form, .contenedor{
+    width: 600px;
+    margin: 0 auto;
+}
+
+.login-form input[type="password"], .login-form input[type="email"]{
+    width: 100%;
+    padding: 20px;
+    border: 3px solid rgb(0, 0, 0);
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    font-family: Mithella;
+    font-size: medium;
+}
+
+/* Hay que centrar los botones. Solo son pruebas, tú decides si lo dejamos o lo quitamos, también cambiar los colores       */
+
+.btn-login{ 
+    width: 20%;
+    padding: 15px;
+    background-color: #6f42c1;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    font: weight 400px;
+    font-family: Papernotes;
+    font-size:x-large;
+    color: white;
+}
+
+.btn-login:hover, .btn-login:active{
+    background-color: #61428f;
+    border-color:#61428f;
+    color: white;
+    }
+    .btn-login:focus{
+        box-shadow: 0 0 0 3px rgba(121, 82, 179,0.28);
+    }
+
+.btn-register{
+    width: 20%;
+    padding: 15px;
+    background-color: #34D399;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    font: weight 400px;
+    font-family: Papernotes;
+    font-size:x-large;
+    color: white;
+    margin-top: 20px;
+    text-align: center;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+}
+
+.btn-register:hover, .btn-register:active{
+    background-color: #10B981;
+    border-color:#10B981;
+    color: white;
+    }
+    .btn-register:focus{
+        box-shadow: 0 0 0 3px #10B981;
+    }

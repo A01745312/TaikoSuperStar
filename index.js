@@ -40,40 +40,94 @@ app.get('/main', (req,res) => {
 });
 
 
-app.get('/login',(req,res)=>{
-    res.sendFile(path.join(__dirname,'views','login.html'));
+// ------ PÁGINA REGISTER ---------
+
+app.get('/register',(req,res)=>{
+    res.sendFile(path.join(__dirname,'views','register.html'));
 });
 
-app.post('/pruebaDatos',(req,res)=>{
-    console.log('Pase por prueba datos');
-    console.log(req.body);
-    res.redirect('/main');
-});
 
-// Para subir datos a la BD
-app.post("/login", async(req,res) => {
+    // Subir datos a la BD ** Registra al usuario **
+
+app.post("/register", (req,res) => {
     const email = req.body.emailUsuario;
     const password = req.body.passwordUsuario;
     const confirmPass = req.body.passwordConfirmarUsuario;
     if (password == confirmPass){
-  
-        let passwordHaash = await bcryptjs.hash(password,8);
         connection.query('INSERT INTO login SET ?', {
             email:email, 
-            password:passwordHaash, 
-            'confirm password':passwordHaash 
-        }, async(error,results) => {
-        if(error){
-            console.log(error);
-        }else{
-            res.send("Alta exitosa");
-        }
+            password:password, 
+            'confirm password':confirmPass 
+        }, (error,results) => {
+            if(error){
+                console.log(error);
+            }else{
+                res.render ('register.html' , {
+                    alert: true,
+                    alertTitle: "Registration",
+                    alertMessage: "Successful Registration",
+                    alertIcon: 'success',
+                    showConfirmButton: false,
+                    timer: 1500,
+                    ruta: 'main'
+                })
+            }
         });
     }else{
         console.log("Las contraseñas no coinciden");
-        res.status(404).send('La contraseña no coincide');
+        res.render ('register.html' , {
+            alert: true,
+            alertTitle: "Password does not match",
+            alertMessage: "",
+            alertIcon: 'error',
+            showConfirmButton: true,
+            timer: 0,
+            ruta: 'register'
+        })
     }
 });
+
+// ----------- PÁGINA LOGIN ---------
+
+app.get('/login',(req,res)=>{
+    res.sendFile(path.join(__dirname,'views','login.html'));
+});
+
+    // Valida al usuario ** Loggea al usuario **
+
+app.post("/login", (req,res) => {
+    const email = req.body.emailUsuario;
+    const password = req.body.passwordUsuario;
+    if(email && password){
+        connection.query('SELECT * FROM login WHERE email = ?', [email], (error,results) =>{
+            const pass = results[0].password; 
+            if(password != pass){
+                res.render ('login.html' , {
+                    alert: true,
+                    alertTitle: "Incorrect user / password",
+                    alertMessage: "",
+                    alertIcon: 'error',
+                    showConfirmButton: true,
+                    timer: false,
+                    ruta: 'login'
+                })
+                console.log('Usuario incorrecto');
+            }else{
+                console.log('Usuario correcto');
+                res.render ('login.html' , {
+                    alert: true,
+                    alertTitle: "Login",
+                    alertMessage: "Successful",
+                    alertIcon: 'success',
+                    showConfirmButton: false,
+                    timer: 1500,
+                    ruta: 'main'
+                })
+            }
+        })
+    }
+                
+    });
 
 app.listen(8081,()=> console.log("Servidor en línea en el puerto 8081"));
 

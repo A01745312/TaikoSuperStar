@@ -24,36 +24,55 @@
         <section class="hero">   <!-- Los <section> son como un tipo de apartados, indican que es el contenido más importante del sitio WEB-->
             <div class="contenido-hero">
                         <h1 class="text-dark"> Percussion Art Web Games <span> TaikoStart </span></h1>
-
-                    <br>
-                    <br>
+                        <h2 class="text-dark"> Registrate </h2>
+                        
                         <div class="container">
-                            <h3> Already part of our community?... SIGN IN </h3>
-                            <form action="/login" method="post">
-                                <div class="login-form">
+                            <form action="/register" method="post">
+                                <div class="form-register">
                                     <label for="emailUsuario">Email: </label>
                                     <input type="email" class="form-control" id="emailUsuario" name="emailUsuario" placeholder="Email" required>
-                                </div>
-                                <div class="login-form">
                                     <label for="passwordUsuario">Password: </label>
                                     <input type="password" class="form-control" id="passwordUsuario" name="passwordUsuario" placeholder="Password" required>
+                                    <label for="passwordConfirmarUsuario">Confirm Password: </label>
+                                    <input type="password" class="form-control" id="passwordConfirmarUsuario" name="passwordConfirmarUsuario" placeholder="Confirma Password" required>
+                                    
                                 </div>
-                                <button class="btn-login" type="submit"> LOGIN </button>
+                                <button class="btn-register" type="submit">Enviar</button>
+                                <!--
+                                <div class="form-register" style="display: inline;">
+                                    <label for="passwordUsuario">Password: </label>
+                                    <input type="password" class="form-control" id="passwordUsuario" name="passwordUsuario" placeholder="Password">
+                                </div>
+                                <div class="form-register">
+                                    <label for="passwordConfirmarUsuario">Confirm Password: </label>
+                                    <input type="password" class="form-control" id="passwordConfirmarUsuario" name="passwordConfirmarUsuario" placeholder="Confirma Password">
+                                </div>
+                                <button class="btn-register" type="submit">Enviar</button>
+                                -->
                             </form>
-                            <a href="register" class="btn-register">REGISTER</a>
                         </div>
-                        
+
                         <!--NOTA:
                                     Se usa <nav> cuando son bastantes links de navegación
                                     
                                     En caso de colocar un solo "link de navegación" basta con usar las etiquetas <a href="#"> texto </a>
                                 -->
-                        
-    
             </div>  <!-- .contenido-hero -->
-
-            
-
+            <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+            <if(typeof alert != "undefined"){ >
+                <script>
+                    Swal.fire({
+                        title: '<%= alertTitle %>',
+                        text: '<%= alertMessage %>',
+                        icon: '<%= alertIcon %>',
+                        showConfirmButton: <%= showConfirmButton %> ,
+                        timer: <%= timer %>
+                        }).then(()=>{
+                            window.location='/<%= ruta %>'
+                        })
+                </script>
+    
         </section> <!-- Aquí acaba una parte importante del ciclo -->
 
         <br>
@@ -67,20 +86,6 @@
         <footer class="container">    <!-- Estas se colocan al final y por lo general tienen información de derechos de autor-->
             <p> Todos los derechos reservados. Paula Sophia Santoyo, Paola Danae López, Diego Alejandro Balderas, Gilberto André Gaytán y Ricardo Condado </p>
         </footer>
-        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    
-        <if(typeof alert != "undefined"){ >
-            <script>
-                Swal.fire({
-                    title: '<%= alertTitle %>',
-                    text: '<%= alertMessage %>',
-                    icon: '<%= alertIcon %>',
-                    showConfirmButton: <%= showConfirmButton %> ,
-                    timer: <%= timer %>
-                    }).then(()=>{
-                        window.location='/<%= ruta %>'
-                    })
-            </script>
     </body>     <!-- Con esto se cierra el contenido de la página-->
     </html>     <!-- Con esto se concluye el desarrollo de creación de la página-->
 </html>
