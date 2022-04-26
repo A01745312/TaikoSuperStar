@@ -49,14 +49,26 @@ app.get('/register',(req,res)=>{
     // Subir datos a la BD ** Registra al usuario **
 
 app.post("/register", (req,res) => {
+    const name = req.body.nameUsuario;
+    const user = req.body.userUsuario;
+    const gender = req.body.genderUser;
     const email = req.body.emailUsuario;
+    const age = req.body.ageUsuario;
+    const country = req.body.country;
+    const type = req.body.userType;
     const password = req.body.passwordUsuario;
     const confirmPass = req.body.passwordConfirmarUsuario;
     if (password == confirmPass){
         connection.query('INSERT INTO login SET ?', {
+            userName: name,
+            userUser: user,
+            gender: gender,
+            birth: age,
+            userType: type,
+            country:country,
             email:email, 
             password:password, 
-            'confirm password':confirmPass 
+            'confirm password':confirmPass
         }, (error,results) => {
             if(error){
                 console.log(error);
@@ -83,7 +95,7 @@ app.post("/register", (req,res) => {
             timer: 0,
             ruta: 'register'
         })
-    }
+    }   
 });
 
 // ----------- PÁGINA LOGIN ---------

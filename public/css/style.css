@@ -251,3 +251,137 @@ h1,h2,h3 {
     .btn-register:focus{
         box-shadow: 0 0 0 3px #10B981;
     }
+
+    .form-register, .contenedor{
+        font-size: 18px;
+        width: 1000px;
+        margin: 0 auto;
+        font-family: 'Mithella';
+    }
+    
+    .form-register input[type="password"], .form-register input[type="email"], 
+    .form-register input[type="text"]
+    {
+        border-radius: 10px;
+        width: 100%;
+        padding: 20px;
+        border: 3px solid rgb(0, 0, 0);
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        font-family: Mithella;
+        font-size: medium;
+    }
+    
+    .dropdown {
+        border: 3px solid rgb(0, 0, 0);
+        font-family: 'Mithella';
+        border-radius: 10px;
+        appearance: select;
+        background: #ffffff;
+        color: rgb(0, 0, 0);
+        width: 70%;
+        padding: 10px;
+        font-size: 18px;
+        margin-left: 46px;
+        margin-top: 15px;
+        margin-bottom: 7px;
+    }
+    
+    input[type="date"]{
+        
+        width: 70%;
+        padding: 20px;
+        border-radius: 10px;
+        font-family: 'Mithella';
+        font-size: 18px;
+        color: black;
+        background-color:white;
+        border: 3px solid rgb(0, 0, 0);
+        text-align: center;
+        margin-left: 30px;
+    }
+    
+    
+    @font-face {
+        font-family: 'Font Awesome 6 Free';
+        src: url('fonts/Font Awesome 6 Free-Solid-900.otf');
+    }
+    
+    .option-input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -o-appearance: none;
+        appearance: none;
+        position: relative;
+        top: 13.33333px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 30px;
+        width: 30px;
+        transition: all 0.15s ease-out 0s;
+        background: #cbd1d8;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        margin-right: 0.5rem;
+        outline: none;
+        position: relative;
+        z-index: 1000;
+      }
+      .option-input:hover {
+        background: #9faab7;
+      }
+      .option-input:checked {
+        background: #40e0d0;
+      }
+      .option-input:checked::before {
+        width: 30px;
+        height: 30px;
+        display:flex;
+        content:'\f00c';
+        font-size: 22px;
+        font-weight:bold;
+        position: absolute;
+        align-items:center;
+        justify-content:center;
+        font-family:'Font Awesome 6 Free';
+        }
+      .option-input:checked::after {
+        -webkit-animation: click-wave 0.65s;
+        -moz-animation: click-wave 0.65s;
+        animation: click-wave 0.65s;
+        background: #40e0d0;
+        content: '';
+        display: block;
+        position: relative;
+        z-index: 100;
+      }
+      .option-input.radio {
+        border-radius: 50%;
+        margin-left: 20px;
+        margin-top: 0px;
+      }
+      .option-input.radio::after {
+        border-radius: 50%;
+      }
+      
+      @keyframes click-wave {
+        0% {
+          height: 40px;
+          width: 40px;
+          opacity: 0.35;
+          position: relative;
+        }
+        100% {
+          height: 200px;
+          width: 200px;
+          margin-left: -80px;
+          margin-top: -80px;
+          opacity: 0;
+        }
+      }
+
+
