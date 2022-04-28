@@ -39,6 +39,10 @@ app.get('/main', (req,res) => {
 });
 
 
+app.get('/mainPas', (req,res) => {
+    res.sendFile(path.join(__dirname, 'views', 'index2.html'));
+});
+
 // ------ PÁGINA REGISTER ---------
 
 app.get('/register',(req,res)=>{
@@ -67,21 +71,32 @@ app.post("/register", (req,res) => {
             userType: type,
             country:country,
             email:email, 
-            password:password, 
-            'confirm password':confirmPass
+            password:password
         }, (error,results) => {
             if(error){
                 console.log(error);
             }else{
-                res.render ('register.html' , {
-                    alert: true,
-                    alertTitle: "Registration",
-                    alertMessage: "Successful Registration",
-                    alertIcon: 'success',
-                    showConfirmButton: false,
-                    timer: 1500,
-                    ruta: 'main'
-                })
+                if(type == 'PAS'){
+                    res.render ('register.html' , {
+                        alert: true,
+                        alertTitle: "Registration",
+                        alertMessage: "Successful Registration",
+                        alertIcon: 'success',
+                        showConfirmButton: false,
+                        timer: 1500,
+                        ruta: 'mainPAS'
+                    })
+                }else{
+                    res.render ('register.html' , {
+                        alert: true,
+                        alertTitle: "Registration",
+                        alertMessage: "Successful Registration",
+                        alertIcon: 'success',
+                        showConfirmButton: false,
+                        timer: 1500,
+                        ruta: 'main'
+                    })
+                }
             }
         });
     }else{
