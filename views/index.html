@@ -3,100 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link href="C:\Users\Paula\Documents\Profesional\4to semestre\TaikoAvance\public\css\style.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <title>Taiko Super Star!</title>
 </head>
     <body>
 
-        <div class="nav-bg">    <!--div de "division" -división . Sirve para crear secciones o agrupar contenidos.-->
-
-            <nav class="navegacion-principal contenedor">  <!-- Puedes colocar mas de una clase con solo colocar un espacio, 
-                                                            OJO sólo se hace con las clases, NO aplica con ID --> 
-                <a href="#">Inicio</a>      <!-- Esto es para declarar un solo "link de navegación" -->
-                <a href="#">Sobre Mi</a>    <!-- <a href="#"> :: Esto es para darle el atributo de link -->
-                <a href="#">Clientes</a>    <!--<a href="#"> :: En el signo de "#", es donde debe de ir el link a donde redireccionará la página-->
-                <a href="#">Contacto</a>
-                <!--<a href="nosotros.html">Inicio </a> -->
-        
-        <!-- En el pasado, la sintaxis para crear links de navegación en HTML era:
-        
-            <ul>
-                <li> </li>
-            </ul>
-        
-            Esta sintaxis aún se utiliza espcialmente si el diseño del menú es de multiples niveles 
-        
-        -->
-        
-        
-        
-                <!--    <img src="hero.jpg">    // Sintaxis para colocar una imagen 
-                
-                    OJO:
-                        Para colocar la imagen que desees, es necesario que esta esté en la misma carpeta de trabajo
-                        que en la que estan todos los HTML producidos
-        
-                -->
-            </nav>
-        </div>
-
-        <header class="row">    <!-- El header es la parte principal de todo el sitio WEB -->
+    <!-------------------------HEADER (IMÁGENES)------------------------->
+        <header class="row"> 
             <br>
             <div class="col-6">
-                <img src="images/gtfo.png" class="float-left" alt="Responsive image"/>
+                <img src="images/gtfo.png" class="img-fluid float-left" alt="Responsive image"/>
             </div>
+            <!--
+            <div class="col-4">
+                <img src="images/tec.png" class="img-fluid rounded mx auto d-block" alt="Responsive image"/>
+            </div>
+            -->
             <div class="col-6">
-                <img src="images/taiko_logo.png" class="float-right" width="200" height="120"/>
+                <img src="images/TLogo_Rmster.png" class="img-fluid float-right" width="200" height="120" alt="Responsive image"/>
             </div>
-
         </header>   <!-- Acaba Header -->
 
-        <div class="container">
-            <div class="row">
-                    <div class="col-md">
-                        
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-diagram-3-fill" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H14a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 2 7h5.5V6A1.5 1.5 0 0 1 6 4.5v-1zm-6 8A1.5 1.5 0 0 1 1.5 10h1A1.5 1.5 0 0 1 4 11.5v1A1.5 1.5 0 0 1 2.5 14h-1A1.5 1.5 0 0 1 0 12.5v-1zm6 0A1.5 1.5 0 0 1 7.5 10h1a1.5 1.5 0 0 1 1.5 1.5v1A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5v-1zm6 0a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5v-1z"/>
-                            </svg>
-                            <a href="#"> About Us </a>
-                        
-                    </div>
+    <!-------------------------FINISH HEADER------------------------->
 
-                    <div class="col-md">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-controller" viewBox="0 0 16 16">
-                            <path d="M11.5 6.027a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm2.5-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm-6.5-3h1v1h1v1h-1v1h-1v-1h-1v-1h1v-1z"/>
-                            <path d="M3.051 3.26a.5.5 0 0 1 .354-.613l1.932-.518a.5.5 0 0 1 .62.39c.655-.079 1.35-.117 2.043-.117.72 0 1.443.041 2.12.126a.5.5 0 0 1 .622-.399l1.932.518a.5.5 0 0 1 .306.729c.14.09.266.19.373.297.408.408.78 1.05 1.095 1.772.32.733.599 1.591.805 2.466.206.875.34 1.78.364 2.606.024.816-.059 1.602-.328 2.21a1.42 1.42 0 0 1-1.445.83c-.636-.067-1.115-.394-1.513-.773-.245-.232-.496-.526-.739-.808-.126-.148-.25-.292-.368-.423-.728-.804-1.597-1.527-3.224-1.527-1.627 0-2.496.723-3.224 1.527-.119.131-.242.275-.368.423-.243.282-.494.575-.739.808-.398.38-.877.706-1.513.773a1.42 1.42 0 0 1-1.445-.83c-.27-.608-.352-1.395-.329-2.21.024-.826.16-1.73.365-2.606.206-.875.486-1.733.805-2.466.315-.722.687-1.364 1.094-1.772a2.34 2.34 0 0 1 .433-.335.504.504 0 0 1-.028-.079zm2.036.412c-.877.185-1.469.443-1.733.708-.276.276-.587.783-.885 1.465a13.748 13.748 0 0 0-.748 2.295 12.351 12.351 0 0 0-.339 2.406c-.022.755.062 1.368.243 1.776a.42.42 0 0 0 .426.24c.327-.034.61-.199.929-.502.212-.202.4-.423.615-.674.133-.156.276-.323.44-.504C4.861 9.969 5.978 9.027 8 9.027s3.139.942 3.965 1.855c.164.181.307.348.44.504.214.251.403.472.615.674.318.303.601.468.929.503a.42.42 0 0 0 .426-.241c.18-.408.265-1.02.243-1.776a12.354 12.354 0 0 0-.339-2.406 13.753 13.753 0 0 0-.748-2.295c-.298-.682-.61-1.19-.885-1.465-.264-.265-.856-.523-1.733-.708-.85-.179-1.877-.27-2.913-.27-1.036 0-2.063.091-2.913.27z"/>
-                          </svg> 
-                        <a href="#"> VideoGame </a> 
-                    </div>
-                    <div class="col-md">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-graph-up" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M0 0h1v15h15v1H0V0Zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07Z"/>
-                          </svg> 
-                        <a href="#"> WorldStart Score </a> 
-                    </div>
-                    <div class="col-md">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                            <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
-                          </svg> 
-                        <a href="#"> Contact Us </a> 
-                    </div>
-                    <div class="col-md">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-bounding-box" viewBox="0 0 16 16">
-                            <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z"/>
-                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                          </svg>
-                        <a href="#"> My Space</a> </div>
-            </div>
+
+    <!-----------------------------NAVEGADOR (About Us, VideoGame, WorldStart Score, Contact Us)----------------------------->
+        <div class="nav-bg">
+            <nav class="navegacion-principal contenedor"> 
+                <!-- <div class="row"> -->
+                        <!--<div class="col-md">-->   
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-diagram-3-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H14a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 2 7h5.5V6A1.5 1.5 0 0 1 6 4.5v-1zm-6 8A1.5 1.5 0 0 1 1.5 10h1A1.5 1.5 0 0 1 4 11.5v1A1.5 1.5 0 0 1 2.5 14h-1A1.5 1.5 0 0 1 0 12.5v-1zm6 0A1.5 1.5 0 0 1 7.5 10h1a1.5 1.5 0 0 1 1.5 1.5v1A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5v-1zm6 0a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5v-1z"/>
+                                </svg>
+                                <a href="#"> About Us </a>   
+                        <!--</div>-->
+
+                        <!-- <div class="col-md"> -->
+                            <div class="navegacion-principal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-controller" viewBox="0 0 16 16">
+                                    <path d="M11.5 6.027a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm2.5-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm-6.5-3h1v1h1v1h-1v1h-1v-1h-1v-1h1v-1z"/>
+                                    <path d="M3.051 3.26a.5.5 0 0 1 .354-.613l1.932-.518a.5.5 0 0 1 .62.39c.655-.079 1.35-.117 2.043-.117.72 0 1.443.041 2.12.126a.5.5 0 0 1 .622-.399l1.932.518a.5.5 0 0 1 .306.729c.14.09.266.19.373.297.408.408.78 1.05 1.095 1.772.32.733.599 1.591.805 2.466.206.875.34 1.78.364 2.606.024.816-.059 1.602-.328 2.21a1.42 1.42 0 0 1-1.445.83c-.636-.067-1.115-.394-1.513-.773-.245-.232-.496-.526-.739-.808-.126-.148-.25-.292-.368-.423-.728-.804-1.597-1.527-3.224-1.527-1.627 0-2.496.723-3.224 1.527-.119.131-.242.275-.368.423-.243.282-.494.575-.739.808-.398.38-.877.706-1.513.773a1.42 1.42 0 0 1-1.445-.83c-.27-.608-.352-1.395-.329-2.21.024-.826.16-1.73.365-2.606.206-.875.486-1.733.805-2.466.315-.722.687-1.364 1.094-1.772a2.34 2.34 0 0 1 .433-.335.504.504 0 0 1-.028-.079zm2.036.412c-.877.185-1.469.443-1.733.708-.276.276-.587.783-.885 1.465a13.748 13.748 0 0 0-.748 2.295 12.351 12.351 0 0 0-.339 2.406c-.022.755.062 1.368.243 1.776a.42.42 0 0 0 .426.24c.327-.034.61-.199.929-.502.212-.202.4-.423.615-.674.133-.156.276-.323.44-.504C4.861 9.969 5.978 9.027 8 9.027s3.139.942 3.965 1.855c.164.181.307.348.44.504.214.251.403.472.615.674.318.303.601.468.929.503a.42.42 0 0 0 .426-.241c.18-.408.265-1.02.243-1.776a12.354 12.354 0 0 0-.339-2.406 13.753 13.753 0 0 0-.748-2.295c-.298-.682-.61-1.19-.885-1.465-.264-.265-.856-.523-1.733-.708-.85-.179-1.877-.27-2.913-.27-1.036 0-2.063.091-2.913.27z"/>
+                                </svg> 
+                            </div>
+                            <a href="#"> VideoGame </a> 
+                        <!-- </div> -->
+
+                        <!-- <div class="col-md"> -->
+                            <div class="pool">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-graph-up" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M0 0h1v15h15v1H0V0Zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07Z"/>
+                            </svg> 
+                            </div>
+                            <a href="#"> WorldStart Score </a> 
+                        <!-- </div> -->
+
+                        <!-- <div class="col-md"> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+                            </svg> 
+                            <a href="#"> Contact Us </a> 
+                        <!-- </div> -->
+
+                        <!-- <div class="col-md"> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-person-bounding-box" viewBox="0 0 16 16">
+                                <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z"/>
+                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                            </svg>
+                            <a href="#"> My Space</a> 
+                        <!-- </div> -->
+
+                <!--</div> -->
+            </nav>
         </div>
+    <!---------------------------------------------- FINISH NAVEGADOR ----------------------------------------------------->
+
+
         <br>
         <br>
-        <div class="container">
-            <div class="card">
-                <img class="card-img-buttom" src="images/pas.jpg" alt="Card image"/>
+
+    <!----------------------------- CARD SECTION -------------------------------------------------->
+
+        <div class="scontainer carder">
+            <div class="spCard">
+                <figure>
+                    <img class="img-fluid" src="images/pas.jpg"/>
+                </figure>
                 <div class="card-body">
                     <h3 class="card-title">Percussion Arts Society</h3>
                     <p class="card-text">
@@ -110,19 +103,70 @@
                         dolorum, modi numquam fugit incidunt iure deleniti corporis quidem. 
                         Esse accusantium tempore quod totam quasi!                        
                     </p>
-                </div>
+                </div>  <!-- CARD-BODY FINISH-->
 
-            </div>
-        </div>
+            </div> <!------ CARD FINISH ------>
+
+            <div class="spCard">
+                <figure>
+                    <img class="img-fluid" src="images/main.png" alt="Responsive Image"/>
+                </figure>
+                <div class="card-body">
+                    <h3 class="card-title">Percussion Arts Society</h3>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Reiciendis provident, sapiente in deserunt doloremque quas, 
+                        dolorum, modi numquam fugit incidunt iure deleniti corporis quidem. 
+                        Esse accusantium tempore quod totam quasi!
+
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Reiciendis provident, sapiente in deserunt doloremque quas, 
+                        dolorum, modi numquam fugit incidunt iure deleniti corporis quidem. 
+                        Esse accusantium tempore quod totam quasi!                        
+                    </p>
+                </div>  <!-- CARD-BODY FINISH-->
+
+            </div> <!------ CARD FINISH ------>
+
+            <div class="spCard">
+                <figure>
+                    <img class="img-fluid" src="images/pas.jpg" alt="Responsive Image"/>
+                </figure>
+                <div class="card-body">
+                    <h3 class="card-title">Percussion Arts Society</h3>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Reiciendis provident, sapiente in deserunt doloremque quas, 
+                        dolorum, modi numquam fugit incidunt iure deleniti corporis quidem. 
+                        Esse accusantium tempore quod totam quasi!
+
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Reiciendis provident, sapiente in deserunt doloremque quas, 
+                        dolorum, modi numquam fugit incidunt iure deleniti corporis quidem. 
+                        Esse accusantium tempore quod totam quasi!                        
+                    </p>
+                </div>  <!-- CARD-BODY FINISH-->
+
+            </div> <!------ CARD FINISH ------>
+
+        </div>  <!-- -------- CARDER FINISH-->
+
+    <!----------------------------- FINISH CARD -------------------------------------------------->
     
-        <footer class="container">    <!-- Estas se colocan al final y por lo general tienen información de derechos de autor-->
-            <p> Todos los derechos reservados. Paula Hacker Santoyo FreeGames, Pao Danae ITC/LAD TalentStar, PicoStar Close Softboy, André/MachinefUCKBOY, and Rey Condado </p>
-        </footer>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!----------------------------- COPYRIGHT -------------------------------------------------->
+    
+    <footer class="container center">
+        <p> CopyRight. Tecnológico de Monterrey Campus Estado de México, Percussion Art Sociaty </p>
+    </footer>
+    <!----------------------------- FINISH COPYRIGHT -------------------------------------------------->
+
     </body>     <!-- Con esto se cierra el contenido de la página-->
-    </html>     <!-- Con esto se concluye el desarrollo de creación de la página-->
+    </html>     <!-- Concluye página-->
 </html>
-
-
-
 
 <!---------------------------------------------------------------------------------------------------------------------->

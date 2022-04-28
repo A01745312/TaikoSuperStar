@@ -148,6 +148,11 @@ h1,h2,h3 {
     
 }
 
+.pool {
+    display: block;
+    text-align: center;
+}
+
 .navegacion-principal a:hover {     /* Esta sección es la encargada de ponerle color a las pestañas de navegación */
     background-color: var(--primario);  /* Establecemos el color de fondo al momento de seleccionarlo, el cual será amarillo */
     color: var(--oscuro);   /* Se coloca el color de la fuente al momento de seleccionarlo */
@@ -384,4 +389,59 @@ h1,h2,h3 {
         }
       }
 
+    .footer {
+       
+        padding: 1em 0;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+    
+    .carder{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
+    .spCard{
+        width: 100%;
+        margin: 20px;
+        border-radius: 6px;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0px 1px 10px rgb(0, 0, 0, 0.2);
+
+    }
+
+    .rcontainer{
+        width: 100%;
+        margin: 20px;
+        border-radius: 6px;
+    }
+
+    .scontainer{
+        width: 100%;
+        display: flex;
+        border-radius: 6px;
+    }
+
+    .nHero {
+        background-image: url(../images/nPartitura.png); /* Esto es para buscar la imagen y colocarla */
+        background-repeat: no-repeat; /* Si se estira adapta en otros dispositivos, la imagen se duplicaría, con eso se soluciona ese error */
+        background-size: cover; /* La colocas en el fondo*/
+        
+        height: 850px;  /* Estableces el tamaño del área*/
+        padding: 10px;
+        position: relative;
+    }
+
+    .taikol {
+        background-image: url(../images/TsinF.png); /* Esto es para buscar la imagen y colocarla */
+        background-repeat: no-repeat; /* Si se estira adapta en otros dispositivos, la imagen se duplicaría, con eso se soluciona ese error */
+        background-size: cover; /* La colocas en el fondo*/
+        
+        height: 850px;  /* Estableces el tamaño del área*/
+        padding: 10px;
+        position: relative;
+    }

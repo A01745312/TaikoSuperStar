@@ -10,38 +10,40 @@
 </head>
     <body>
 
-        <header class="row">    <!-- El header es la parte principal de todo el sitio WEB -->
+    <!-------------------------HEADER (IMÁGENES)------------------------->
+        <header class="row">
             <br>
             <div class="col-6">
                 <img src="images/gtfo.png" class="float-left" alt="Responsive image"/>
             </div>
             <div class="col-6">
-                <img src="images/taiko_logo.png" class="float-right" width="200" height="120"/>
+                <img src="images/taik.png" class="float-right" width="200" height="120"/>
             </div>
 
         </header>   <!-- Acaba Header -->
+    <!-------------------------FINISH HEADER------------------------->
 
-        <section class="hero">   <!-- Los <section> son como un tipo de apartados, indican que es el contenido más importante del sitio WEB-->
-            <div class="contenido-hero">
-                        <h1 class="text-dark"> Percussion Art Web Games <span> TaikoStart </span></h1>
-                        <h2 class="text-dark"> Registrate </h2>
+        <section class="nHero">
+            <div>
+                <h1 class="text-dark"> Percussion Art Web Games <span> TaikoStart </span></h1>
+                    <h2 class="text-dark"> Registrate </h2>
                         
-                        <div class="container">
-                            <form action="/register" method="post">
-                                <div class="form-register">
-                                    <label for="nameUsuario">Full Name</label>
-                                    <input type="text" class="form-control" id="nameUsuario" name="nameUsuario" placeholder="Full Name" required>
-                                    <label for="userUsuario">User name:</label>
-                                    <input type="text" class="form-control" id="userUsuario" name="userUsuario" placeholder="User name" required>
-                                    <label for="genderUser">Gender: </label>
-                                    <select class = "dropdown" id="genderUser" name="genderUser" required >
-                                        <option>Select gender</option>
-                                        <option value="Female">Female</option>
-                                        <option value="Male">Male</option>
-                                        <option value="Non-binary">Non-binary</option>
-                                        <option value="Other">Other</option>
-                                        <option value="Prefer not to say">I prefer not to say</option>
-                                    </select>
+                    <div class="container">
+                        <form action="/register" method="post">
+                            <div class="form-register">
+                                <label for="nameUsuario">Full Name</label>
+                                <input type="text" class="form-control" id="nameUsuario" name="nameUsuario" placeholder="Full Name" required>
+                                <label for="userUsuario">User name:</label>
+                                <input type="text" class="form-control" id="userUsuario" name="userUsuario" placeholder="User name" required>
+                                <label for="genderUser">Gender: </label>
+                                <select class = "dropdown" id="genderUser" name="genderUser" required >
+                                    <option>Select gender</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Non-binary">Non-binary</option>
+                                    <option value="Other">Other</option>
+                                    <option value="Prefer not to say">I prefer not to say</option>
+                                </select>
                                     <br>
                                     <label for="emailUsuario">Email: </label>
                                     <input type="email" class="form-control" id="emailUsuario" name="emailUsuario" placeholder="Email" required>
@@ -320,6 +322,8 @@
                                 <center>
                                 <button class="btn-register" type="submit">Enviar</button>
                                 </center>
+                                <br>
+                                
                                 <!--
                                 <div class="form-register" style="display: inline;">
                                     <label for="passwordUsuario">Password: </label>
@@ -334,12 +338,10 @@
                             </form>
                         </div>
 
-                        <!--NOTA:
-                                    Se usa <nav> cuando son bastantes links de navegación
-                                    
-                                    En caso de colocar un solo "link de navegación" basta con usar las etiquetas <a href="#"> texto </a>
-                                -->
+                        
             </div>  <!-- .contenido-hero -->
+
+            
             <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
             <if(typeof alert != "undefined"){ >
@@ -353,23 +355,22 @@
                         }).then(()=>{
                             window.location='/<%= ruta %>'
                         })
+                        <>
                 </script>
     
         </section> <!-- Aquí acaba una parte importante del ciclo -->
-
+<!--
         <br>
         <br>
         <br>
         <br>
         <br>
         <br>
-
+-->
     
-        <footer class="container">    <!-- Estas se colocan al final y por lo general tienen información de derechos de autor-->
-            <p> Todos los derechos reservados. Paula Sophia Santoyo, Paola Danae López, Diego Alejandro Balderas, Gilberto André Gaytán y Ricardo Condado </p>
-        </footer>
+        
     </body>     <!-- Con esto se cierra el contenido de la página-->
-    </html>     <!-- Con esto se concluye el desarrollo de creación de la página-->
+    </html>     
 </html>
 
 
