@@ -49,6 +49,26 @@ app.get('/register',(req,res)=>{
     res.sendFile(path.join(__dirname,'views','register.html'));
 });
 
+app.get('/myspace',(req,res)=>{
+    res.sendFile(path.join(__dirname,'views','myspace.html'));
+});
+
+app.get('/about-us',(req,res)=>{
+    res.sendFile(path.join(__dirname,'views','aboutUs.html'));
+});
+
+app.get('/videogame',(req,res)=>{
+    res.sendFile(path.join(__dirname,'views','videogame.html'));
+});
+
+app.get('/world-score',(req,res)=>{
+    res.sendFile(path.join(__dirname,'views','worldScore.html'));
+});
+
+app.get('/contact',(req,res)=>{
+    res.sendFile(path.join(__dirname,'views','contact.html'));
+});
+
 
     // Subir datos a la BD ** Registra al usuario **
 
