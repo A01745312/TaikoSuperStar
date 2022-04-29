@@ -3,7 +3,7 @@ const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
-const bcryptjs = require('bcryptjs');
+const session = require('express-session')
 
 
 // Crear servidor
@@ -33,10 +33,19 @@ connection.connect((error) => {
   console.log("Connected to database " + mysql.database);
 });
 
+
+
 // Middleware
 app.use(express.static(path.join(__dirname,'public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
+
+
+app.use(session({
+    secret: 'secret',
+    resave: true,
+    saveUninitialized: true
+}));
 
 
 app.engine('html',require('ejs').renderFile);
@@ -56,14 +65,6 @@ app.get('/mainPas', (req,res) => {
 
 app.get('/register',(req,res)=>{
     res.sendFile(path.join(__dirname,'views','register.html'));
-});
-
-app.get('/myspace',(req,res)=>{
-    res.sendFile(path.join(__dirname,'views','myspace.html'));
-});
-
-app.get('/about-us',(req,res)=>{
-    res.sendFile(path.join(__dirname,'views','aboutUs.html'));
 });
 
 app.get('/videogame',(req,res)=>{
@@ -183,6 +184,9 @@ app.post("/login", (req,res) => {
     }
                 
     });
+
+
+
 
 
 
