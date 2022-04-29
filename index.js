@@ -12,16 +12,25 @@ const app = express();
 
 //Conectar BD
 
-const connection = mysql.createConnection({
+/* const connection = mysql.createConnection({
+    host: "sql304.main-hosting.eu",
+    database: 'u621336810_taiko',
+    password: 'M@ckup2022_',
+    user: 'u621336810_taiko'
+}); */
+
+
+ const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
     database: 'taiko_super_star'
-});
+}); 
 
-connection.connect((err) => {
-  if (err) throw err;
-  console.log("Connected to database");
+
+connection.connect((error) => {
+  if (error) throw error;
+  console.log("Connected to database " + mysql.database);
 });
 
 // Middleware
@@ -84,8 +93,8 @@ app.post("/register", (req,res) => {
     const confirmPass = req.body.passwordConfirmarUsuario;
     if (password == confirmPass){
         connection.query('INSERT INTO login SET ?', {
-            userName: name,
-            userUser: user,
+            name: name,
+            user: user,
             gender: gender,
             birth: age,
             userType: type,
@@ -175,42 +184,9 @@ app.post("/login", (req,res) => {
                 
     });
 
+
+
 app.listen(8081,()=> console.log("Servidor en línea en el puerto 8081"));
 
 
 // ----------------------------------------------------------------------
-
-    //   ******** PLANTILLAS PARA CONEXIÓN BD ***********
-
-
-// Consulta a BD MySQL
-
-    // Por tabla
-    app.get('/destino',(req,res)=>{
-        const consulta = 'SELECT * FROM destino';
-        connection.query(consulta,(error,results) => {
-          if (error) throw error;
-          if (results.length > 0){
-              res.json(results);
-          }else{
-              res.send('No hay resultados');
-          }
-        });
-    });
-    
-    
-        //Por ID
-    app.get('/usuario/:id',(req,res)=>{
-        const {id} = req.params;
-        const consulta = `SELECT * FROM login WHERE clave = ${id}`;
-        connection.query(consulta,(error,results) => {
-            if (error) throw error;
-            if (results.length > 0){
-                res.json(results);
-            }else{
-                res.send('No hay resultados');
-            }
-        });
-    });
-    
-    // -----------------------------------------------------------------------
