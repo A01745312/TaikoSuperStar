@@ -12,20 +12,20 @@ const app = express();
 
 //Conectar BD
 
-/* const connection = mysql.createConnection({
+const connection = mysql.createConnection({
     host: "sql304.main-hosting.eu",
     database: 'u621336810_taiko',
     password: 'M@ckup2022_',
     user: 'u621336810_taiko'
-}); */
+});
 
 
- const connection = mysql.createConnection({
+/*  const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
     database: 'taiko_super_star'
-}); 
+});  */
 
 
 connection.connect((error) => {
@@ -93,48 +93,63 @@ app.post("/register", (req,res) => {
     const password = req.body.passwordUsuario;
     const confirmPass = req.body.passwordConfirmarUsuario;
     if (password == confirmPass){
-        connection.query('INSERT INTO login SET ?', {
-            name: name,
-            user: user,
-            gender: gender,
-            birth: age,
-            userType: type,
-            country:country,
-            email:email, 
-            password:password
-        }, (error,results) => {
-            if(error){
-                console.log(error);
-            }else{
-                if(type == 'PAS'){
-                    res.render ('register.html' , {
-                        alert: true,
-                        alertTitle: "Registration",
-                        alertMessage: "Successful Registration",
-                        alertIcon: 'success',
-                        showConfirmButton: false,
-                        timer: 1500,
-                        ruta: 'mainPAS'
-                    })
+        const tam = password.length;
+        console.log(tam);
+        if (tam >= 8){
+            connection.query('INSERT INTO jugador SET ?', {
+                Nombre: name,
+                Username: user,
+                Genero: gender,
+                FechadeNacimiento: age,
+                TipoDeUsuario: type,
+                Nacionalidad:country,
+                Correo:email, 
+                Contraseña:password
+            }, (error,results) => {
+                if(error){
+                    console.log(error);
                 }else{
-                    res.render ('register.html' , {
-                        alert: true,
-                        alertTitle: "Registration",
-                        alertMessage: "Successful Registration",
-                        alertIcon: 'success',
-                        showConfirmButton: false,
-                        timer: 1500,
-                        ruta: 'main'
-                    })
+                    if(type == 'PAS'){
+                        res.render ('register.html' , {
+                            alert: true,
+                            alertTitle: "Registration",
+                            alertMessage: "Successful Registration",
+                            alertIcon: 'success',
+                            showConfirmButton: false,
+                            timer: 1500,
+                            ruta: 'mainPAS'
+                        })
+                    }else{
+                        res.render ('register.html' , {
+                            alert: true,
+                            alertTitle: "Registration",
+                            alertMessage: "Successful Registration",
+                            alertIcon: 'success',
+                            showConfirmButton: false,
+                            timer: 1500,
+                            ruta: 'main'
+                        })
+                    }
                 }
+            });
+        }else{
+                console.log("Contraseñas menor a 8 digitos");
+                res.render ('register.html' , {
+                    alert: true,
+                    alertTitle: "ERROR",
+                    alertMessage: "Password must be of at least 8 digits",
+                    alertIcon: 'error',
+                    showConfirmButton: true,
+                    timer: 0,
+                    ruta: 'register'
+                })            
             }
-        });
     }else{
         console.log("Las contraseñas no coinciden");
         res.render ('register.html' , {
             alert: true,
-            alertTitle: "Password does not match",
-            alertMessage: "",
+            alertTitle: "ERROR",
+            alertMessage: "Password does not match",
             alertIcon: 'error',
             showConfirmButton: true,
             timer: 0,
