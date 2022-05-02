@@ -83,30 +83,32 @@ app.post("/register", (req,res) => {
     if(user && email){
         connection.query('SELECT * FROM jugador WHERE Username = ? OR Correo = ?', [user, email], (error,results) =>{
             console.log(results);
-            const us_name = results[0].Username; 
-            const mail = results[0].Correo;
-            if(user == us_name){
-                res.render ('register.html' , {
-                    alert: true,
-                    alertTitle: "User already in use, choose other",
-                    alertMessage: "",
-                    alertIcon: 'error',
-                    showConfirmButton: true,
-                    timer: false,
-                    ruta: 'register'
-                })
-                console.log('User taken');
-            }else if(email == mail){
-                res.render ('register.html' , {
-                    alert: true,
-                    alertTitle: "Email has been registered, please login",
-                    alertMessage: "",
-                    alertIcon: 'error',
-                    showConfirmButton: true,
-                    timer: false,
-                    ruta: 'register'
-                })
-                console.log('Email already registered');
+            if (results != 0){
+                const us_name = results[0].Username; 
+                const mail = results[0].Correo;
+                if(user == us_name){
+                    res.render ('register.html' , {
+                        alert: true,
+                        alertTitle: "User already in use, choose other",
+                        alertMessage: "",
+                        alertIcon: 'error',
+                        showConfirmButton: true,
+                        timer: false,
+                        ruta: 'register'
+                    })
+                    console.log('User taken');
+                }else if(email == mail){
+                    res.render ('register.html' , {
+                        alert: true,
+                        alertTitle: "Email has been registered, please login",
+                        alertMessage: "",
+                        alertIcon: 'error',
+                        showConfirmButton: true,
+                        timer: false,
+                        ruta: 'register'
+                    })
+                    console.log('Email already registered');
+                }
             }else{
                 if (password == confirmPass){
                     const tam = password.length;
