@@ -67,6 +67,12 @@ app.get('/register',(req,res)=>{
     res.sendFile(path.join(__dirname,'views','register.html'));
 });
 
+/*
+app.get('/PASIC',(req,res)=>{
+    res.sendFile(path.join(__dirname,'views','pasic.org'));
+});
+*/
+
 app.get('/videogame',(req,res)=>{
     res.sendFile(path.join(__dirname,'views','videogame.html'));
 });

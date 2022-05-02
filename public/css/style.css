@@ -21,6 +21,12 @@
 html {
     font-size: 62.5%;
     box-sizing: border-box;     /* Se resuelve el problema del padding*/    /* Hack para Box Model*/
+    width: 100% ;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Delius Swash Caps', cursive;
 }
 
 *, *:before, *:after {  /* Significa que lo aplicará a toda la página, a todas las propiedades requeridas */
@@ -29,6 +35,7 @@ html {
 
 body {
     background: radial-gradient(var(--laAzul) 0%, var(--rosaAvon) 100% );
+    font-family: 'Delius Swash Caps', cursive;
 }
 
 .contenedor {
@@ -143,10 +150,12 @@ h1,h2,h3 {
 .navegacion-principal a {   /* Esta clase está enfocada más en los navegadores (<a>) */
 /*    background-color: var(--primario); */
     display: block;
+    /*display: contents; /* En mi opinión se ve mejor */
+
     text-align: center;
     color: var(--negro);
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 700;   /* Esta medida se estableció al momento de importar la fuente, por lo que lo que se hace es establecerla en la página */
     padding: 1rem;  /* La medida recomendada para los íconos de navegación, son en su mayoría de 1rem */
     
@@ -163,6 +172,11 @@ h1,h2,h3 {
     
 }
 
+.navegacion-principal a:hover {     /* Esta sección es la encargada de ponerle color a las pestañas de navegación */
+    background-color: var(--colorM);  /* Establecemos el color de fondo al momento de seleccionarlo, el cual será amarillo */
+    color: var(--oscuro);   /* Se coloca el color de la fuente al momento de seleccionarlo */
+    
+}
 
 .hero {
     /*background-image: url(images/main.png);*/ /* Esto es para buscar la imagen y colocarla */
@@ -458,4 +472,38 @@ h1,h2,h3 {
         width: auto;
         padding: auto;
         position: relative;
+    }
+
+
+    .ownerCard{
+        background-color: var(--blanco);
+        border-radius: 1rem;
+        box-shadow: 0 1rem 1rem rgb(0, 0, 0, 0.2);
+        display: flex;
+        margin: 1.5rem;
+        overflow: hidden;
+        width: 30rem;
+        height: 19rem;
+    }
+
+    .ownerCard h6{
+        opacity: 0.6;
+        letter-spacing: .1rem;
+        text-transform: uppercase;
+    }
+
+    .ownerCard h2{
+        letter-spacing: .1rem;
+        margin: 1rem 0;
+        color: var(--negro);
+    }
+
+    .sleft-column{
+        color: var(--blanco);
+        padding: 2rem;
+        max-width: 10rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
     }
