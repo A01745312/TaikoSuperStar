@@ -64,7 +64,7 @@ app.get('/world-score',(req,res)=>{
 });
 
 app.get('/contact',(req,res)=>{
-    res.sendFile(path.join(__dirname,'views','contact.html'));
+    res.sendFile(path.join(__dirname,'views','tlou.html'));
 });
 
 
