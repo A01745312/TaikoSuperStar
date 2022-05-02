@@ -1,7 +1,7 @@
 :root{
-    --blanco: #ffffff;  /* Los colores se colocan en hexadecimal junto con el símbolo de # */
+    --blanco: #ffffff;  
     --oscuro: #21212121;
-    --primario: #FFC107;     /*= --primario: rgba(255, 193, 7, 1); */
+    --primario: #FFC107;
     --secundario: #0097A7;
     --gris: #757575;
     --grisClaro: #DFE9F3;
@@ -9,7 +9,7 @@
     --rosaAvon: #912077;
     --naranjaPlus: rgba(250, 71, 6, 0.808);
     --rosaTenue: rgba(255, 127, 234, 0.895);
-    --fuentePrincipal: 2.8rem;  /* Tamaño de la fuente*/
+    --fuentePrincipal: 2.8rem;
     --moradoCool:  #7128b6;
     --negro: #000;
     --laAzul: rgb(0, 165, 253); 
@@ -76,7 +76,7 @@ body {
 }
 
 
-/* Tipografía */
+/*------------------------------------------------------------------------------------ Tipografía */
 h1 {
     font-size: 3.8rem;
 }
@@ -110,6 +110,8 @@ h1,h2,h3 {
     flex-direction: column;
 
 }
+
+/* ------------------------------------------------------------------------------------------ STYLE RESPONSIVE DESIGN*/
 
 @media (min-width: 768px) {
     .navegacion-principal {
@@ -146,6 +148,7 @@ h1,h2,h3 {
     font-family: Papernotes;
     src: url(fonts/Papernotes.ttf);
 }
+/* ------------------------------------------------------------------------------------------ FINISH STYLE Cards*/
 
 .navegacion-principal a {   /* Esta clase está enfocada más en los navegadores (<a>) */
 /*    background-color: var(--primario); */
@@ -192,7 +195,7 @@ h1,h2,h3 {
     /*background-color: rgba(0, 0, 0,  .75); /** Esta forma ya es un poco vieja**/
     /*background-color: rgb(0 0 0 / 70%);*/
     width: 100%;
-    height: 100%;
+    height: 80%;
     
     display: flex;
     flex-direction: column; /* Alinear el texto en forma de columna*/
@@ -201,7 +204,8 @@ h1,h2,h3 {
 }
 
 .contenido-hero h2, .contenido-hero p {
-    color: var(--oscuro);
+    color: var(--blanco);
+    font-size: 50%;
 }
 
 .contenedor-hero .ubicacion {
@@ -209,6 +213,8 @@ h1,h2,h3 {
     align-items: flex-end;
 }
 
+
+/* ------------------------------------------------------------------------------------------ style FORMS section*/
 .login-form, .contenedor{
     width: 600px;
     margin: 0 auto;
@@ -223,8 +229,6 @@ h1,h2,h3 {
     font-family: Mithella;
     font-size: medium;
 }
-
-/* Hay que centrar los botones. Solo son pruebas, tú decides si lo dejamos o lo quitamos, también cambiar los colores       */
 
 .btn-login{ 
     width: 20%;
@@ -407,6 +411,8 @@ h1,h2,h3 {
         }
       }
 
+/* ------------------------------------------------------------------------------------------ FINISH STYLE FORMS*/
+
     .footer {
        
         padding: 1em 0;
@@ -416,22 +422,6 @@ h1,h2,h3 {
         width: 100%;
     }
     
-    .carder{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    .spCard{
-        width: 100%;
-        margin: 20px;
-        border-radius: 6px;
-        overflow: hidden;
-        background: #fff;
-        box-shadow: 0px 1px 10px rgb(0, 0, 0, 0.2);
-
-    }
-
     .rcontainer{
         width: 100%;
         margin: 20px;
@@ -465,15 +455,28 @@ h1,h2,h3 {
     }
 
     .nfooter{
-        /*background-image: url(images/main.png);*/ /* Esto es para buscar la imagen y colocarla */
-        /*background-repeat: no-repeat;*/ /* Si se estira adapta en otros dispositivos, la imagen se duplicaría, con eso se soluciona ese error */
-        /*background-size: cover;*/ /* La colocas en el fondo*/
         height: 10px;  /* Estableces el tamaño del área*/
         width: auto;
         padding: auto;
         position: relative;
     }
 
+/* ------------------------------------------------------------------------------------------ style Cards section*/
+
+.carder{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.spCard{
+    width: 100%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 1px 10px rgb(0, 0, 0, 0.2);
+}
 
     .ownerCard{
         background-color: var(--blanco);
@@ -507,3 +510,74 @@ h1,h2,h3 {
         align-items: center;
         justify-content: space-between;
     }
+
+/* ------------------------------------------------------------------------------------------ FINISH STYLE Cards*/
+
+
+/* ------------------------------------------------------------------------------------------ style index.html section*/
+    .nhero{
+        background-image: url(../images/fjb.png); /* Esto es para buscar la imagen y colocarla */
+        background-repeat: no-repeat; /* Si se estira adapta en otros dispositivos, la imagen se duplicaría, con eso se soluciona ese error */
+        background-size: cover; /* La colocas en el fondo*/
+        height: 410px;  /* Estableces el tamaño del área*/
+        /*padding: 20px;*/
+        position: relative;
+    }
+
+    .ncontenido-hero {
+        position: absolute;
+        background-color: rgba(0, 0, 0,  .75); /** Esta forma ya es un poco vieja**/
+        background-color: rgb(0 0 0 / 70%);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column; /* Alinear el texto en forma de columna*/
+        align-items: center;    /* Alinear el texto  hacia el centro de forma horizontal */
+        justify-content: center;    /* Alinear el texto  hacia el centro de forma vertical */
+    }
+
+    .ncontenido-hero h2,
+    .ncontenido-hero p {
+        color: var(--blanco);
+    }
+    .ncontenedor-hero .nubicacion {
+        display: flex;
+        align-items: flex-end;
+    }
+
+/* ------------------------------------------------------------------------------------------ FINISH STYLE index.html */
+
+
+
+/* ------------------------------------------------------------------------------------------ style index2.html section*/
+    .nnhero{
+        background-image: url(../images/fjc.png); /* Esto es para buscar la imagen y colocarla */
+        background-repeat: no-repeat; /* Si se estira adapta en otros dispositivos, la imagen se duplicaría, con eso se soluciona ese error */
+        background-size: cover; /* La colocas en el fondo*/
+        height: 410px;  /* Estableces el tamaño del área*/
+        /*padding: 20px;*/
+        position: relative;
+    }
+
+    .nncontenido-hero {
+        position: absolute;
+        background-color: rgba(0, 0, 0,  .75); /** Esta forma ya es un poco vieja**/
+        background-color: rgb(0 0 0 / 70%);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column; /* Alinear el texto en forma de columna*/
+        align-items: center;    /* Alinear el texto  hacia el centro de forma horizontal */
+        justify-content: center;    /* Alinear el texto  hacia el centro de forma vertical */
+    }
+
+    .nncontenido-hero h2,
+    .nncontenido-hero p {
+        color: var(--blanco);
+    }
+    .nncontenedor-hero .nubicacion {
+        display: flex;
+        align-items: flex-end;
+    }
+
+/* ------------------------------------------------------------------------------------------ FINISH STYLE index2.html */
