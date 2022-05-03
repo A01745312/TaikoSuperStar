@@ -12,9 +12,9 @@ const app = express();
 
 const connection = mysql.createConnection({
     host: "localhost",
-    database: 'taiko',
-    password: 'Taiko123.',
-    user: 'root'
+    database: 'www_u621336810_taiko',
+    password: 'M@ckup2022_',
+    user: 'www_u621336810_taiko'
 });
 
 connection.connect((error) => {
