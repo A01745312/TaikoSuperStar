@@ -11,10 +11,10 @@ const app = express();
 //Conectar BD
 
 const connection = mysql.createConnection({
-    host: "sql304.main-hosting.eu",
-    database: 'u621336810_taiko',
-    password: 'M@ckup2022_',
-    user: 'u621336810_taiko'
+    host: "localhost",
+    database: 'taiko',
+    password: 'Taiko123.',
+    user: 'root'
 });
 
 connection.connect((error) => {
