@@ -67,6 +67,10 @@ app.get('/contact',(req,res)=>{
     res.sendFile(path.join(__dirname,'views','tlou.html'));
 });
 
+app.get('/downloadGame',(req,res)=>{
+    res.sendFile(path.join(__dirname,'views','dvgame.html'));
+});
+
 
     // Subir datos a la BD ** Registra al usuario **
 

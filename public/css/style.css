@@ -20,7 +20,7 @@
 
 html {
     font-size: 62.5%;
-    box-sizing: border-box;     /* Se resuelve el problema del padding*/    /* Hack para Box Model*/
+    box-sizing: border-box;     /* Padding issue resolved*/    /* Hack for Box Model*/
     width: 100% ;
     height: 100%;
     margin: 0;
@@ -29,7 +29,7 @@ html {
     font-family: 'Delius Swash Caps', cursive;
 }
 
-*, *:before, *:after {  /* Significa que lo aplicará a toda la página, a todas las propiedades requeridas */
+*, *:before, *:after {  /* Means it will apply it to the whole page, to all required properties */
     box-sizing: inherit;
 }
 
@@ -42,7 +42,7 @@ body {
     /*width: 120rem;  /* 1200 pixeles */
     max-width: 120rem;
 
-/* Esta sección es para acomodar */
+/* This section is to accommodate */
 
     margin-top: 0px;
     margin-right: auto;
@@ -71,12 +71,12 @@ body {
 }
 
 .titulo, .subtitulo {
-    text-align: center; /* Centrar el texto */
+    text-align: center; /* center the text */
     font-size: var(--fuentePrincipal);    /* =   font-size: 2rem;*/
 }
 
 
-/*------------------------------------------------------------------------------------ Tipografía */
+/*------------------------------------------------------------------------------------ Typography */
 h1 {
     font-size: 3.8rem;
 }
@@ -91,22 +91,21 @@ h1,h2,h3 {
 }
 
 
-/* Títulos */
+/* Titles */
 
 .titulo span {
-    font-size: 20px;    /* Cambiar el tamaño de la fuente */
+    font-size: 20px;    /* Change font size */
 
 }
 
 
-.nav-bg {   /* .nav-bg corrigió el problema de repartición de pixeles junto al <div>*/
+.nav-bg {   /* .nav-bg fixed pixel splitting issue next to <div>*/
     background-color: var(--blanco);    
 }
 
 .navegacion-principal {
     
-    display: flex;       /* Aún no lo comprendo , sólo sé que activa los comandos flex */
-    
+    display: flex;       
     flex-direction: column;
 
 }
@@ -150,17 +149,17 @@ h1,h2,h3 {
 }
 /* ------------------------------------------------------------------------------------------ FINISH STYLE Cards*/
 
-.navegacion-principal a {   /* Esta clase está enfocada más en los navegadores (<a>) */
-/*    background-color: var(--primario); */
+.navegacion-principal a {   /* This class is more focused on browsers (<a>) */
+/*    background-color: var(--primary); */
     display: block;
-    /*display: contents; /* En mi opinión se ve mejor */
+    /*display: contents; /* In my opinion it looks better */
 
     text-align: center;
     color: var(--negro);
     text-decoration: none;
     font-size: 2.5rem;
-    font-weight: 700;   /* Esta medida se estableció al momento de importar la fuente, por lo que lo que se hace es establecerla en la página */
-    padding: 1rem;  /* La medida recomendada para los íconos de navegación, son en su mayoría de 1rem */
+    font-weight: 700;   /* This measure was set at the time of importing the source, so what is done is to set it on the page */
+    padding: 1rem;  /* The recommended size for navigation icons is mostly 1rem */
     
 }
 
@@ -169,9 +168,9 @@ h1,h2,h3 {
     text-align: center;
 }
 
-.navegacion-principal a:hover {     /* Esta sección es la encargada de ponerle color a las pestañas de navegación */
-    background-color: var(--colorM);  /* Establecemos el color de fondo al momento de seleccionarlo, el cual será amarillo */
-    color: var(--oscuro);   /* Se coloca el color de la fuente al momento de seleccionarlo */
+.navegacion-principal a:hover {    /* This section is in charge of putting color to the navigation tabs */
+    background-color: var(--colorM); /* We set the background color when selecting it, which will be yellow */
+    color: var(--oscuro);   /* The font color is placed when selecting it */
     
 }
 
@@ -463,6 +462,35 @@ h1,h2,h3 {
 
 /* ------------------------------------------------------------------------------------------ style Cards section*/
 
+.background1-left-column{
+    /*background: linear-gradient(180deg, #21c8f6, #637bff);*/
+    background: var(--primario);
+}
+
+.background2-left-column{
+    /*background: linear-gradient(180deg, #73f621, #637bff);*/
+    background: #10B981;
+}
+
+/*.ownerBody{
+
+}*/
+
+.ownerHTML *{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+
+}
+
+.ownercontainer{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
 .carder{
     margin: 0;
     padding: 0;
@@ -511,6 +539,37 @@ h1,h2,h3 {
         justify-content: space-between;
     }
 
+    .sleft-column h2{
+        color: var(--blanco);
+    }
+
+    .sleft-column i{
+        font-size: 5rem;
+    }
+
+    .sright-column{
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .sright-column p{
+        font-size: .9rem;
+        color: var(--negro);
+    }
+
+    .sbutton {
+        border-radius: 3rem;
+        box-shadow: 0 1rem 1rem rgb(0, 0, 0, 0.2);
+        color: var(--negro);
+        font-size: 1.2rem;
+        padding: .8rem 1.3rem;
+        letter-spacing: .1rem;
+        align-self: flex-end;
+    }
+
 /* ------------------------------------------------------------------------------------------ FINISH STYLE Cards*/
 
 
@@ -531,7 +590,7 @@ h1,h2,h3 {
         width: 100%;
         height: 100%;
         display: flex;
-        flex-direction: column; /* Alinear el texto en forma de columna*/
+        flex-direction: column; /* Alinear el texto en forma de columna */
         align-items: center;    /* Alinear el texto  hacia el centro de forma horizontal */
         justify-content: center;    /* Alinear el texto  hacia el centro de forma vertical */
     }
