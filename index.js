@@ -197,7 +197,18 @@ app.post("/login", (req,res) => {
     if(correo && password){
         connection.query('SELECT * FROM jugador WHERE Correo = ?', [correo], (error,results) =>{
             console.log(results);
-            const pass = results[0].Contraseña; 
+            const pass = results[0].Contraseña;
+            if(pass==0){
+                res.render ('login.html' , {
+                    alert: true,
+                    alertTitle: "Email not registered",
+                    alertMessage: "",
+                    alertIcon: 'error',
+                    showConfirmButton: true,
+                    timer: false,
+                    ruta: 'login'
+                })
+            } 
             if(password != pass){
                 res.render ('login.html' , {
                     alert: true,
