@@ -9,4 +9,4 @@ With the help of Javascript and node.js the API is created.
 
 And with html and css the page is styled.
 
-<img src="TsinF.png" public="My cool logo"/>
+<img src="readme.png" public="My cool logo"/>
