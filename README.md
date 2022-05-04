@@ -1,5 +1,6 @@
 # TaikoSuperStar
 
+To run this API you need node.js
 
 In this repository, what is done is to create the API, the user interface to the page and the page is given a function.
 
