@@ -8,3 +8,5 @@ Node.js, javascript, html, css, bootstrap were used for the development of this 
 With the help of Javascript and node.js the API is created.
 
 And with html and css the page is styled.
+
+<img src="TsinF.png" alt="My cool logo"/>
