@@ -197,8 +197,7 @@ app.post("/login", (req,res) => {
     if(correo && password){
         connection.query('SELECT * FROM jugador WHERE Correo = ?', [correo], (error,results) =>{
             console.log(results);
-            const pass = results[0].Contraseña;
-            if(pass==0){
+            if (error==0){
                 res.render ('login.html' , {
                     alert: true,
                     alertTitle: "Email not registered",
@@ -208,7 +207,14 @@ app.post("/login", (req,res) => {
                     timer: false,
                     ruta: 'login'
                 })
-            } 
+            }
+            else{
+
+            
+
+            const pass = results[0].Contraseña;
+
+
             if(password != pass){
                 res.render ('login.html' , {
                     alert: true,
@@ -243,7 +249,7 @@ app.post("/login", (req,res) => {
                         ruta: 'main'
                     })
                 }
-            }
+            }}
                 
         })
     }
