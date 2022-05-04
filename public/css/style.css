@@ -672,7 +672,7 @@ h1,h2,h3 {
 }
 
 .tcontainer h2{
-    color: var(--gris);
+    color: var(--blanco);
     font-size: 4rem;
     font-weight: 400;
 }
