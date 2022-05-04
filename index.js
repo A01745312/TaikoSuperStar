@@ -197,7 +197,7 @@ app.post("/login", (req,res) => {
     if(correo && password){
         connection.query('SELECT * FROM jugador WHERE Correo = ?', [correo], (error,results) =>{
             console.log(results);
-            if (error==0){
+            if (results==0){
                 res.render ('login.html' , {
                     alert: true,
                     alertTitle: "Email not registered",
