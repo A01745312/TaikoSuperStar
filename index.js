@@ -1,14 +1,14 @@
-// Importar librerias
+// Import libraries
 const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
 
-// Crear servidor
+// create serverr
 const app = express();
 
 
-//Conectar BD
+// Connect Database
 
 const connection = mysql.createConnection({
     host: "sql304.main-hosting.eu",
@@ -43,17 +43,12 @@ app.get('/mainPas', (req,res) => {
     res.sendFile(path.join(__dirname, 'views', 'index2.html'));
 });
 
-// ------ PÁGINA REGISTER ---------
+// ------ REGISTER PAGE ---------
 
 app.get('/register',(req,res)=>{
     res.sendFile(path.join(__dirname,'views','register.html'));
 });
 
-/*
-app.get('/PASIC',(req,res)=>{
-    res.sendFile(path.join(__dirname,'views','pasic.org'));
-});
-*/
 
 app.get('/videogame',(req,res)=>{
     res.sendFile(path.join(__dirname,'views','videogame.html'));
@@ -72,7 +67,7 @@ app.get('/downloadGame',(req,res)=>{
 });
 
 
-    // Subir datos a la BD ** Registra al usuario **
+    // Upload data to the DB ** Register the user **
 
 app.post("/register", (req,res) => {
     const name = req.body.nameUsuario;
@@ -154,7 +149,7 @@ app.post("/register", (req,res) => {
                             }
                         });
                     }else{
-                        console.log("Contraseñas menor a 8 digitos");
+                        console.log("Passwords less than 8 digits");
                         res.render ('register.html' , {
                             alert: true,
                             alertTitle: "ERROR",
@@ -166,7 +161,7 @@ app.post("/register", (req,res) => {
                         })            
                     }
                 }else{
-                    console.log("Las contraseñas no coinciden");
+                    console.log("Passwords do not match");
                     res.render ('register.html' , {
                         alert: true,
                         alertTitle: "ERROR",
@@ -183,13 +178,13 @@ app.post("/register", (req,res) => {
       
 });
 
-// ----------- PÁGINA LOGIN ---------
+// ----------- LOGIN PAGE ---------
 
 app.get('/login',(req,res)=>{
     res.sendFile(path.join(__dirname,'views','login.html'));
 });
 
-    // Valida al usuario ** Loggea al usuario **
+    // Validate the user ** Log the user **
 
 app.post("/login", (req,res) => {
     const correo = req.body.emailUsuario;

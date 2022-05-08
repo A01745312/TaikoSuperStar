@@ -434,27 +434,27 @@ h1,h2,h3 {
     }
 
     .nHero {
-        background-image: url(../images/nPartitura.png); /* Esto es para buscar la imagen y colocarla */
-        background-repeat: no-repeat; /* Si se estira adapta en otros dispositivos, la imagen se duplicaría, con eso se soluciona ese error */
-        background-size: cover; /* La colocas en el fondo*/
+        background-image: url(../images/nPartitura.png); /* This is to fetch the image and place it */
+        background-repeat: no-repeat; /* If it is stretched adaptively on other devices, the image would be duplicated, that fixes that error */
+        background-size: cover; /* Put it in the background */
         
-        height: 850px;  /* Estableces el tamaño del área*/
+        height: 850px;  /* Set the size of the area */
         padding: auto;
         position: sticky;
     }
 
     .taikol {
-        background-image: url(../images/TsinF.png); /* Esto es para buscar la imagen y colocarla */
-        background-repeat: no-repeat; /* Si se estira adapta en otros dispositivos, la imagen se duplicaría, con eso se soluciona ese error */
-        background-size: cover; /* La colocas en el fondo*/
+        background-image: url(../images/TsinF.png); /* This is to fetch the image and place it */
+        background-repeat: no-repeat; /* If it is stretched adaptively on other devices, the image would be duplicated, that fixes that error */
+        background-size: cover; /* Put it in the background */
         
-        height: 850px;  /* Estableces el tamaño del área*/
+        height: 850px;  /* Set the size of the area */
         padding: 10px;
         position: relative;
     }
 
     .nfooter{
-        height: 10px;  /* Estableces el tamaño del área*/
+        height: 10px;  /* Set the size of the area */
         width: auto;
         padding: auto;
         position: relative;
@@ -575,24 +575,24 @@ h1,h2,h3 {
 
 /* ------------------------------------------------------------------------------------------ style index.html section*/
     .nhero{
-        background-image: url(../images/fjb.png); /* Esto es para buscar la imagen y colocarla */
-        background-repeat: no-repeat; /* Si se estira adapta en otros dispositivos, la imagen se duplicaría, con eso se soluciona ese error */
-        background-size: cover; /* La colocas en el fondo*/
-        height: 410px;  /* Estableces el tamaño del área*/
+        background-image: url(../images/fjb.png); /* This is to fetch the image and place it */
+        background-repeat: no-repeat; /* If it is stretched adaptively on other devices, the image would be duplicated, that fixes that error */
+        background-size: cover; /* Put it in the background */
+        height: 410px;  /* Set the size of the area */
         /*padding: 20px;*/
         position: relative;
     }
 
     .ncontenido-hero {
         position: absolute;
-        background-color: rgba(0, 0, 0,  .75); /** Esta forma ya es un poco vieja**/
+        background-color: rgba(0, 0, 0,  .75); /** This form is already a bit old**/
         background-color: rgb(0 0 0 / 70%);
         width: 100%;
         height: 100%;
         display: flex;
-        flex-direction: column; /* Alinear el texto en forma de columna */
-        align-items: center;    /* Alinear el texto  hacia el centro de forma horizontal */
-        justify-content: center;    /* Alinear el texto  hacia el centro de forma vertical */
+        flex-direction: column; /* Align the text as a column */
+        align-items: center;    /* Align the text to the center horizontally */
+        justify-content: center;    /* Align the text to the center vertically */
     }
 
     .ncontenido-hero h2,
@@ -610,24 +610,24 @@ h1,h2,h3 {
 
 /* ------------------------------------------------------------------------------------------ style index2.html section*/
     .nnhero{
-        background-image: url(../images/fjc.png); /* Esto es para buscar la imagen y colocarla */
-        background-repeat: no-repeat; /* Si se estira adapta en otros dispositivos, la imagen se duplicaría, con eso se soluciona ese error */
-        background-size: cover; /* La colocas en el fondo*/
-        height: 410px;  /* Estableces el tamaño del área*/
+        background-image: url(../images/fjc.png); /* This is to fetch the image and place it */
+        background-repeat: no-repeat; /* If it is stretched adaptively on other devices, the image would be duplicated, that fixes that error */
+        background-size: cover; /* Put it in the background */
+        height: 410px;  /* Set the size of the area */
         /*padding: 20px;*/
         position: relative;
     }
 
     .nncontenido-hero {
         position: absolute;
-        background-color: rgba(0, 0, 0,  .75); /** Esta forma ya es un poco vieja**/
+        background-color: rgba(0, 0, 0,  .75); /** This form is already a bit old**/
         background-color: rgb(0 0 0 / 70%);
         width: 100%;
         height: 100%;
         display: flex;
-        flex-direction: column; /* Alinear el texto en forma de columna*/
-        align-items: center;    /* Alinear el texto  hacia el centro de forma horizontal */
-        justify-content: center;    /* Alinear el texto  hacia el centro de forma vertical */
+        flex-direction: column; /* Align the text as a column */
+        align-items: center;   /* Align the text to the center horizontally */
+        justify-content: center;    /* Align the text to the center vertically */
     }
 
     .nncontenido-hero h2,
